@@ -1,0 +1,52 @@
+#navbar ul { 
+	margin: 0; 
+	padding: 5px; 
+	list-style-type: none; 
+	text-align: right; 
+    background-color: #333333; 
+    padding: 0% 10%;
+	} 
+ 
+#navbar ul li {  
+	display: inline; 
+	} 
+ 
+#navbar ul li a { 
+	text-decoration: none; 
+	padding: .2em 1em; 
+	color: #ff0099; 
+	} 
+
+* {
+    margin: 0%;
+}
+body {
+    background-image: url(topography.png);
+}
+
+h1, h2, h3, p {
+    padding: 0.5% 10%;
+    font-family: Courier New, Courier, monospace;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+.intro h2 {
+    color: #ff0099;
+}
+
+h1 {
+    padding: 5% 10% 2% 10%;
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
+
+.wiki h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
