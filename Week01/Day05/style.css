@@ -20,6 +20,13 @@
     
 }
 
+.middle {
+    height: 600px;
+    width: 620px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
 .leftbox, .rightbox {
     height: 410px;
     width: 285px;
@@ -27,6 +34,7 @@
     box-sizing: border-box;
     margin: 1px auto;
     border: 15px solid red; 
+    display: inline-block;
 
 }
 
