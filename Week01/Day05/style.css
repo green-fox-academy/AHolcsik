@@ -20,7 +20,7 @@
     padding: 3px;
     margin-top: 15px;
     
-    
+
 }
 
 .middle {
@@ -29,10 +29,14 @@
     /* background: #ff1200;
     margin-top: 15px; */
 }
+.leftbox {
+    float: left;
+    clear: both;
+}
 
 .leftbox, .rightbox {
     height: 435px;
-    width: 308px;
+    width: 310px;
     background: #ffe42e;
     margin-top: 15px;
     border: 15px solid #ff1200; 
