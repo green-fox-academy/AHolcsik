@@ -6,7 +6,7 @@
 .back {
     height: 785px;
     width: 620px;
-    background: #127731;
+    background: #dcd6cd;
     margin: 1px auto;
     padding-top: 1px;
 
@@ -37,14 +37,13 @@
 .leftbox, .rightbox {
     height: 435px;
     width: 310px;
-    background: #ffe42e;
-    margin-top: 15px;
-    border: 15px solid #ff1200; 
+    background: #dcd6cd;
+    margin-top: 15px; 
     display: inline-block;
 
 }
 
-.bottom {
+/* .bottom {
     height: 180px;
     width: 620px;
     background: #ffe42e;
@@ -52,4 +51,11 @@
     margin-top: 15px;
     
 
+} */
+
+h2 {
+    padding: 20px;
+    background: #948b97;
 }
+
+
