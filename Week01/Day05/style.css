@@ -1,0 +1,30 @@
+
+    
+.header {
+    height: 300px;
+    width: 620px;
+    background: green;
+    box-sizing: border-box;
+    margin: 1px auto;
+    
+}
+
+.leftbox, .rightbox {
+    height: 300px;
+    width: 285px;
+    background: green;
+    box-sizing: border-box;
+    margin: 1px auto;
+
+}
+
+
+
+.bottom {
+    height: 300px;
+    width: 620px;
+    background: green;
+    box-sizing: border-box;
+    margin: 1px auto;
+
+}
