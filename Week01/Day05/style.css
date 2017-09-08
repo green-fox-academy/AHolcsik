@@ -21,9 +21,10 @@
 .leftbox, .rightbox {
     height: 300px;
     width: 285px;
-    background: green;
+    background: yellow;
     box-sizing: border-box;
     margin: 1px auto;
+    border: 15px solid red; 
 
 }
 
