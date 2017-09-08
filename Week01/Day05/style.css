@@ -1,11 +1,20 @@
 
-    
-.header {
-    height: 300px;
+.back {
+    height: 785px;
     width: 620px;
     background: green;
     box-sizing: border-box;
     margin: 1px auto;
+
+}
+    
+.header {
+    height: 45px;
+    width: 620px;
+    background: yellow;
+    box-sizing: border-box;
+    margin: 1px auto;
+    border: 15px solid red; 
     
 }
 
