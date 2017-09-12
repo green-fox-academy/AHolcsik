@@ -1,13 +1,3 @@
-# - Create (dynamically) a two dimensional list
-#   with the following matrix. Use a loop!
-#
-#   1 0 0 0
-#   0 1 0 0
-#   0 0 1 0
-#   0 0 0 1
-#
-# - Print this two dimensional list to the output
-
 l = [1, 0, 0, 0]
 
 def create_grid(grid_height, grid_width):
@@ -24,9 +14,3 @@ def print_grid(grid):
         print(row)
 
 print_grid(create_grid(4,4))
-
-
-
-
-
-
