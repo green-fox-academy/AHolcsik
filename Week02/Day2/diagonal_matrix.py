@@ -16,6 +16,9 @@ def create_grid(grid_height, grid_width):
         row_list = []
         for j in range(grid_width):
             row_list.append ("0")
+            if j == i:
+                row_list.append("1")
+            
         grid.append (row_list)
     return grid
 
