@@ -8,6 +8,11 @@
 #   `"orchid", "violet", "pink", "hot pink"`
 
 
-colors = [["lime", "forest green", "olive", "pale green", "spring green"], ["orange red", "red", "tomato"], ["orchid", "violet", "pink", "hot pink"]]
+colors = {
+    'color1': "lime", "forest green", "olive", "pale green", "spring green"
+    color2 = ["orange red", "red", "tomato"]
+    color3 = ["orchid", "violet", "pink", "hot pink"]
+}
+
 
 print(colors)
