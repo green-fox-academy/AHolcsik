@@ -6,6 +6,6 @@
 am = "kuty"
 
 def appendA(x):
-   print(x.append ("a"))
+   print(x + ("a"))
 
 appendA(am)
