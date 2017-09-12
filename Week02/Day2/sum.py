@@ -2,9 +2,9 @@
 #   until the given parameter
 
 def sum(num):
-    total = 1
-    for n in range(1, num):
-        total *= n+1
+    total = 0
+    for n in range(0, num):
+        total += n
     print(total)
 
 sum(3)
