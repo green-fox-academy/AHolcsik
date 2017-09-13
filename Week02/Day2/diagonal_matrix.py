@@ -22,11 +22,11 @@ def create_grid(grid_height, grid_width):
         grid.append (row_list)
     return grid
 
-def print_grid(grid):
-    for row in grid:
-        print(row)
+#def print_grid(grid):
+#    for row in grid:
+#        print(row)
 
-print_grid(create_grid(4,4))
+print(create_grid(4,4))
 
 
 
