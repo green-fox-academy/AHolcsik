@@ -8,8 +8,7 @@ preverb = "be"
 
 def create_new_verbs(verbs, preverb):
     for i in (verbs):
-        print("be" + "nez")
-
+        print("be" + i)
     return (verbs)
 
-print(create_new_verbs(verbs, preverb))
+create_new_verbs(verbs, preverb)
