@@ -15,8 +15,8 @@ students = [
 # - Sum of the age of people who have lass than 5 candies
 
 def candy_owned(students):
-    for i in ('names'):
-        print (values)
+    for i in range(students[2:3]):
+        return ('names')
 
-candy_owned
+print(candy_owned)
 
