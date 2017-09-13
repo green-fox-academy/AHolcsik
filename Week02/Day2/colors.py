@@ -8,11 +8,15 @@
 #   `"orchid", "violet", "pink", "hot pink"`
 
 
-colors = {
-    'color1': "lime", "forest green", "olive", "pale green", "spring green"
-    color2 = ["orange red", "red", "tomato"]
-    color3 = ["orchid", "violet", "pink", "hot pink"]
-}
+colors = [
+    ["lime", "forest green", "olive", "pale green", "spring green"],
+    ["orange red", "red", "tomato"],
+    ["orchid", "violet", "pink", "hot pink"]
+]
+
+def print_colors(colors):
+    for row in colors:
+        print(row)
 
 
-print(colors)
+print_colors
