@@ -5,16 +5,13 @@ girls = ["Eve", "Ashley", "Bozsi", "Kat", "Jane"]
 boys = ["Joe", "Fred", "Bela", "Todd", "Neef", "Jeff"]
 
 def matching(girls, boys):
-    order = []
-    for i in (boys):
-        for j in (girls):
-            order.append (i)
-#        if i < len(boys):
-            
-            order.append (j)
-        else:
-            print (order)
+    order = boys
+    a = 0
+    for i in (girls):
+            order.insert (a,i)
+            a += 2
+    print (order)
     return (order)
 
-print(matching(girls,boys))
+matching(girls,boys)
   
