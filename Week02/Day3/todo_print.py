@@ -9,8 +9,8 @@
 #  - Download games
 #      - Diablo
 
-todoText = " - Buy milk\n"
+todoText = "My todo\n - Buy milk\n"
 add_one = " - Download games\n"
-add_two = " - Diablo"
+add_two = "     - Diablo"
 
 print(todoText + add_one + add_two)
