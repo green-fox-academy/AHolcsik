@@ -27,16 +27,16 @@ def create_grid(lines):
         row_list = []
         for j in range(lines):
             if j == i:
-                row_list.append("1")
+                row_list.append("%")
             else:    
-                row_list.append ("0")
+                row_list.append ("#")
         grid.append (row_list)
     return grid
 
 def print_grid(grid):
-    for row in int(grid):
+    for row in grid:
         print(row)
 
-print_grid(lines)
+print_grid(create_grid(lines))
 
 
