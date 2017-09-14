@@ -26,7 +26,7 @@ def print_grid(grid):
     for row in grid:
         print(row)
 
-print(create_grid(4,4))
+print_grid(create_grid(4,4))
 
 
 
