@@ -1,4 +1,4 @@
-b = 24
+a = 24
 out = 0
 # if w is even increment out by one
 
@@ -8,21 +8,26 @@ def is_it_even(a):
         out += 1
     print(out)
 
-is_it_even(b)
-
-
-
+is_it_even(a)
 
 
 b = 13
-out2 = ""
+
 # if b is between 10 and 20 set out2 to "Sweet!"
 # if less than 10 set out2 to "More!",
 # if more than 20 set out2 to "Less!"
 
+def between_range(b):
+    out2 = ""
+    if 10 < b < 20:
+        out2 = "Sweet!"
+    elif b < 10:
+        out2 = "More!"
+    else:
+        out2 = "Less!"
+    print(out2)
 
-print(out2)
-
+between_range(b)
 
 
 c = 123
