@@ -5,7 +5,7 @@
 #
 # Sum: 22, Average: 4.4
 
-numbers = int(input("Give me a number: ")), int(input("And another: "))
+numbers = [int(input("Give me a number: ")), int(input("And another: "))]
 
 def new_number(numbers):
     answer = input("Do you want to add another number? y/n ")
