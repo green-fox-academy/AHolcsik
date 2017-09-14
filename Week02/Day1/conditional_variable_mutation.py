@@ -8,7 +8,7 @@ def is_it_even(a):
         out += 1
     print(out)
 
-#is_it_even(a)
+is_it_even(a)
 
 
 b = 13
@@ -27,7 +27,7 @@ def between_range(b):
         out2 = "Less!"
     print(out2)
 
-#between_range(b)
+between_range(b)
 
 
 c = 123
@@ -51,9 +51,6 @@ def vary_c(c):
 vary_c(c)
 
 
-
-
-
 d = 8
 time = 120
 out3 = ""
@@ -64,6 +61,13 @@ out3 = ""
 # set out3 to "Time out"
 # otherwise set out3 to "Run Forest Run!"
 
+def whats_the_time(value, time):
+    if value % 4 == 0 and time <= 200:
+        out3 = "check"
+    elif time > 200:
+        out3 = "Time out"
+    else:
+        out3 = "Run Forest Run!"
+    print(out3)
 
-print(out3)
-
+whats_the_time(d, time)
