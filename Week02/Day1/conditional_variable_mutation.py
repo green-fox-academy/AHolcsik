@@ -8,7 +8,7 @@ def is_it_even(a):
         out += 1
     print(out)
 
-is_it_even(a)
+#is_it_even(a)
 
 
 b = 13
@@ -27,7 +27,7 @@ def between_range(b):
         out2 = "Less!"
     print(out2)
 
-between_range(b)
+#between_range(b)
 
 
 c = 123
@@ -39,8 +39,17 @@ is_bonus = False
 # and is_bonus is false decrement c by 1
 # if is_bonus is true c should remain the same
 
+def vary_c(c):
+    if credits >= 50 and is_bonus == False:
+        c -= 2
+    elif credits < 50 and is_bonus == False:
+        c -= 1
+    elif is_bonus == True:
+        c = c
+    print(c)
 
-print(c)
+vary_c(c)
+
 
 
 
