@@ -19,11 +19,22 @@ def solution_again(number_of_people):
         the first power of two needs to be excluded
         the number which "starts" then is the winner!
 
-if n = 2^number + l and l < 2*number
+if n = 2 ** number + l and l < 2*number
 winner is 2*l + 1
+
+def solution_final(number_of_people):
+    while number_of_people 
+
+
+
+
+
+
 
 
 in binary it's even easier but that's cheating
+
+
 
 
 
