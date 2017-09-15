@@ -7,13 +7,15 @@ for x in range(1):
 
 def compare_numbers(x):
     user_guess = int(input("What is your guess? "))
-#    while user_guess != x:
-    if user_guess < x:
-        print("Too low! Guess again!")
-    elif user_guess > x:
-        print("Too high! Guess again!")
-    else:
-        print("Congrats! You guessed correctly! The number was ", x)
+    while user_guess != x:
+        if user_guess < x:
+            print("Too low!")
+            user_guess = int(input("Guess again! "))
+        elif user_guess > x:
+            print("Too high!")
+            user_guess = int(input("Guess again! "))
+    if user_guess == x:
+        print("Congrats! You guessed correctly! The number was", x)
     
 
 compare_numbers(x)
