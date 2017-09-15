@@ -1,3 +1,4 @@
+import math
 number_of_people = int(input("Hey, Josephus! What's the number of peeps? "))
 
 def solution(number_of_people):
@@ -22,7 +23,22 @@ def solution_again(number_of_people):
 if n = 2 ** number + l and l < 2*number
 winner is 2*l + 1
 
-def solution_final(number_of_people):
+#a is the power of 2 in the given number
+#find biggest power of a
+
+
+
+
+math.sqrt(number_of_people)
+#the power needs to be determined for formula
+def find_the_power(number_of_people):
+    return int(math.log(a, 2))
+
+    
+
+
+
+def solution_final(a):
     while number_of_people 
 
 
