@@ -7,7 +7,7 @@ file_2 = "new.txt"
 
 def copy_file(file_1, file_2):
     f = open (file_1, "r")
-    fw = open (file_2, "r+")
+    fw = open (file_2, "w")
     for line in f.readlines():
             fw.write(line)
 
