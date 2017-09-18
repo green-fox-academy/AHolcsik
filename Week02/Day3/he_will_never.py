@@ -15,12 +15,11 @@ hashmap = {
     11: "\n",
     3: "say goodbye"
 }
+out = ""
 
-def decode(hashmap, not_so_cryptic_message):
-    out = ""
-    for element in (not_so_cryptic_message):
-        for key in (hashmap):
-            out += str(key)
-    print(out)
+for element in not_so_cryptic_message:
+    for number, code in hashmap.items():
+        if element == number:
+            out += code + (" ")
 
-decode(hashmap, not_so_cryptic_message)
+print(out)
