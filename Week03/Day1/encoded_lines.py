@@ -2,32 +2,39 @@
 
 import string
 
-file_name = "encoded_lines.txt"
+file_name = "Uif [fo pg Qzuipo"
 
-def caesar(file_name, shift):
-    f = open(file_name, "r")
-    shift %= 26
-    alphabet_lower = string.ascii_lowercase
-    alphabet_upper = string.ascii_uppercase
+alphabet = string.ascii_lowercase + string.ascii_uppercase
 
-    shifted_alphabet_lower = alphabet_lower[shift:] + alphabet_lower [:shift]
-    shifted_alphabet_upper = alphabet_upper[shift:] + alphabet_upper [:shift]
 
-    alphabet = alphabet_lower + alphabet_upper
-    shifted_alphabet = shifted_alphabet_lower + shifted_alphabet_upper
+# def decrypt(file_name, start = -1):
+#     f = open(file_name, "r")
+#     n = start
+#     decrypted = ""
+#     for element in f.read():
+#         for char in alphabet:
+#             if char == element:
+#                 decrypted += char(-1)
+#     print(decrypted)
 
-    table = string.maketrans(alphabet, shifted_alphabet)
+# decrypt(file_name)
 
-    return plaintext.translate(table)
 
-#def decrypt(file_name):
-#    f = open(file_name, "r")
-#    decrypted = ""
-#    for element in f.read():
-#        for char in alphabet:
-#            if char == element:
-#                decrypted += char(-1)
-#    print(decrypted)
+def decode(file_name):
+    global alpha
+    global alphaupper
+    words = cleartext.replace(cleartext[len(cleartext) - 1], "")
+    words = words.replace(words[0], "")
+    cyphertext = ""
+    for char in words:
+        if char in alphaupper:
+            newpos = (alphaupper.find(char) + 27) % 26
+            cyphertext += alphaupper[newpos]
+        elif char in alpha:
+            newpos = (alpha.find(char) + 27) % 26
+            cyphertext += alpha[newpos]
+        else:
+            cyphertext += char
+    return cyphertext
 
-#decrypt(file_name)
-print(caesar(file_name, 1))
+print(decode)
