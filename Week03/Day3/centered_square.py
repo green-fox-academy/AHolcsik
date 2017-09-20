@@ -7,4 +7,6 @@ canvas.pack()
 
 # draw a green 10x10 square to the center of the canvas.
 
+center_square = canvas.create_rectangle(145, 145, 155, 155, fill='green')
+
 root.mainloop()
