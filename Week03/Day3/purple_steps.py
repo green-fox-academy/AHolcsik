@@ -7,6 +7,7 @@ canvas.pack()
 canvas_width = 300
 canvas_height = 300
 
+
 # reproduce this:
 # [https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps/r3.png]
 
