@@ -2,39 +2,27 @@
 
 import string
 
-file_name = "Uif [fo pg Qzuipo"
+file_name = "encoded_lines"
 
 alphabet = string.ascii_lowercase + string.ascii_uppercase
+string.ascii_lowercase.index
+
+def decrypt(file_name, start = -1):
+    f = open(file_name, "r")
+    actual_index = string.ascii_lowercase.index(char)
+    return string.ascii_lowercase[actual_index-1]
+str alma
+out
+for char in str
+out == swap (char)
 
 
-# def decrypt(file_name, start = -1):
-#     f = open(file_name, "r")
-#     n = start
-#     decrypted = ""
-#     for element in f.read():
-#         for char in alphabet:
-#             if char == element:
-#                 decrypted += char(-1)
-#     print(decrypted)
 
-# decrypt(file_name)
+    decrypted = ""
+    for element in f.read():
+        for char in alphabet:
+            if char == element:
+                decrypted += char(-1)
+    print(decrypted)
 
-
-def decode(file_name):
-    global alpha
-    global alphaupper
-    words = cleartext.replace(cleartext[len(cleartext) - 1], "")
-    words = words.replace(words[0], "")
-    cyphertext = ""
-    for char in words:
-        if char in alphaupper:
-            newpos = (alphaupper.find(char) + 27) % 26
-            cyphertext += alphaupper[newpos]
-        elif char in alpha:
-            newpos = (alpha.find(char) + 27) % 26
-            cyphertext += alpha[newpos]
-        else:
-            cyphertext += char
-    return cyphertext
-
-print(decode)
+decrypt(file_name)
