@@ -22,8 +22,6 @@ class Dice(object):
         else:
             self.roll()
 
-
-
 # dice.reroll(3)
 # print(dice.get_current(3))
 
@@ -31,9 +29,10 @@ class Dice(object):
 dice = Dice()
 print(dice.get_current())
 dice.roll()
-print(dice.get_current())
-for element in dice.get_current:
-    if element != 6:
+result = dice.get_current()
+print(result)
+for element in range(len(result)):
+    while dice.get_current(element) != 6:
         dice.reroll(element)
 
 print(dice.get_current())
