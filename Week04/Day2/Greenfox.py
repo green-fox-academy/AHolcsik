@@ -9,7 +9,7 @@ class Person:
         print("Hi, I'm {}, a {} year old {}".format(self.name, self.age, self.gender))
 
     def get_goal(self):
-        print("My goal is: Live for the moment!")
+        print("My goal is to: Live for the moment!")
 
 class Student:
 
@@ -18,16 +18,16 @@ class Student:
         self.age = int(age)
         self.gender = gender
         self.previous_organization = previous_organization
-        self.skipped_days = skipped_days
+        self.skipped_days = int(skipped_days)
 
     def get_goal(self):
-        print("Be a junior software developer.") 
+        print("My goal is to: Be a junior software developer.") 
 
     def introduce(self):
         print("Hi, I'm {}, a {} year old {} from {} who skipped {} days from the course already.".format(self.name, self.age, self.gender, self.previous_organization, self.skipped_days))
 
-    def skipped_days(number_of_days):
-        self.skipped_days += number_of_days
+    def skip_days(self, number_of_days):
+        self.skipped_days += int(number_of_days)
 
 class Mentor:
 
@@ -38,17 +38,80 @@ class Mentor:
         self.level = level
 
     def get_goal(self):
-        print("Educate brilliant junior software developers.")
+        print("My goal is to: Educate brilliant junior software developers.")
 
     def introduce(self):
         print("Hi, I'm {}, a {} year old {} {} mentor".format(self.name, self.age, self.gender, self.level))
 
+class Sponsor:
 
+    def __init__(self, name = "Jane Doe", age = "30", gender = "female", company = "Google", hired_students = 0):
+        self.name = name
+        self.age = int(age)
+        self.gender = gender
+        self.company = company
+        self.hired_students = hired_students
 
+    def introduce(self):
+        print("Hi, I'm {}, a {} year old {} who represents {} and hired {} students so far.".format(self.name, self.age, self.gender, self.company, self.hired_students))
 
-stu = Mentor()
-stu.introduce()
+    def hire(self):
+        self.hired_students += 1
 
+    def get_goal(self):
+        print("My goal is to: Hire brilliant junior software developers.")    
+
+class PallidaClass:
+
+    def __init__(self, class_name):
+        self.class_name = "Rabbit"
+        self.students = []
+        self.mentors = []
+
+    def add_student(self, Student):
+        self.students += student.name
+
+    def add_mentor(self, Mentor):
+        self.mentors += mentor.name
+
+    def info(self):
+        print("Pallida {} class has {} students and {} mentors.".format(self.class_name, len(self.students), len(self.mentors)))
+
+people = []
+
+mark = Person('Mark', 46, 'male')
+people.append(mark)
+jane = Person()
+people.append(jane)
+john = Student('John Doe', 20, 'male', 'BME')
+people.append(john)
+student = Student()
+people.append(student)
+gandhi = Mentor('Gandhi', 148, 'male', 'senior')
+people.append(gandhi)
+mentor = Mentor()
+people.append(mentor)
+sponsor = Sponsor()
+elon = Sponsor('Elon Musk', 46, 'male', 'SpaceX')
+people.append(elon)
+student.skip_days(3)
+
+for i in range(5):
+    elon.hire()
+
+for i in range(3):
+    sponsor.hire()
+
+for member in people:
+    member.introduce()
+    member.get_goal()
+
+badass = PallidaClass('Rabbit')
+badass.add_student(student)
+badass.add_student(john)
+badass.add_mentor(mentor)
+badass.add_mentor(gandhi)
+badass.info()
 
 
 
