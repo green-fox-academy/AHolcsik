@@ -11,17 +11,20 @@ class Student(object):
     def learn(self):
         print('oh wow')
 
-    def question(teacher):
+    def question(self, teacher):
         teacher.teach
         print('wtf?')
 
 
 class Teacher(object):
 
-    def teach(student):
+    def teach(self, student):
         student.learn
         print('bla bla bla')
 
+Jolanka = Teacher()
 Pistike = Student()
-Pistike.question()
+Pistike.question(Jolanka)
+Jolanka.teach(Pistike)
+
 
