@@ -8,14 +8,20 @@
 
 class Student(object):
 
-    def learn():
+    def learn(self):
+        print('oh wow')
 
     def question(teacher):
         teacher.teach
+        print('wtf?')
 
 
 class Teacher(object):
 
     def teach(student):
         student.learn
+        print('bla bla bla')
+
+Pistike = Student()
+Pistike.question()
 
