@@ -1,10 +1,21 @@
 class Garden:
 
-    def water(self, amount, plant, plants):
-        for element in plants:
-            if element.needs_water:
-                element.water_amount += (amount / len(plants)) * 0.75
+    def __init__(self):
+        self.plants = []
 
+    def add(self, element):
+        if element in self.plants:
+            pass
+        else:
+            self.plants.append(element)
+
+    # def __str__(self):
+
+
+    def water(self, amount, plants):
+        for element in plants:
+            if element.needs_water():
+                element.water_amount += (amount / len(plants)) * 0.75
 
 class Plant:
 
@@ -12,29 +23,29 @@ class Plant:
         self.color = color
         self.water_amount = water_amount
 
-    def needs_water(self, water_amount):
+    def needs_water(self):
         if self.water_amount < 5:
-            return True
+            return 'needs water'
+        else:
+            return 'not needs water'
 
-
-orange_tree = Plant(water_amount = 9, color = "orange")
+orange_tree = Plant(water_amount = 4, color = "orange")
 purple_tree = Plant(water_amount = 5, color = "purple")
 yellow_flower = Plant(water_amount = 1, color = "yellow")
-blue_flower = Plant(water_amount = 6, color = "blue")
-
-plants = []
-
-plants.append(orange_tree)
-plants.append(purple_tree)
-plants.append(yellow_flower)
-plants.append(blue_flower)
+blue_flower = Plant(water_amount = 3, color = "blue")
 
 garden = Garden()
 
-for member in plants:
-    print(member.water_amount)
+garden.add(yellow_flower)
+garden.add(blue_flower)
+garden.add(orange_tree)
+garden.add(purple_tree)
+print(garden.plants)
 
-garden.water(10, blue_flower, plants)
+for member in garden.plants:
+    print(member.needs_water())
 
-for member in plants:
+garden.water(10, garden.plants)
+
+for member in garden.plants:
     print(member.water_amount)
