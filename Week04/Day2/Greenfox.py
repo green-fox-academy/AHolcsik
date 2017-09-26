@@ -11,10 +11,9 @@ class Person:
     def get_goal(self):
         print("My goal is: Live for the moment!")
 
-class Student(Person):
+class Student:
 
     def __init__(self, name = "Jane Doe", age = "30", gender = "female", previous_organization = "The Shool of Life", skipped_days = 0):
-        super().__init__()
         self.name = name
         self.age = int(age)
         self.gender = gender
@@ -30,11 +29,26 @@ class Student(Person):
     def skipped_days(number_of_days):
         self.skipped_days += number_of_days
 
+class Mentor:
+
+    def __init__(self, name = "Jane Doe", age = "30", gender = "female", level = "intermediate"):
+        self.name = name
+        self.age = int(age)
+        self.gender = gender
+        self.level = level
+
+    def get_goal(self):
+        print("Educate brilliant junior software developers.")
+
+    def introduce(self):
+        print("Hi, I'm {}, a {} year old {} {} mentor".format(self.name, self.age, self.gender, self.level))
 
 
 
 
-stu = Student()
+stu = Mentor()
 stu.introduce()
+
+
 
 
