@@ -1,10 +1,11 @@
 import unittest
-from anna_work import GetsApple, SumExercise, Anagramm, CountLetters
+from anna_work import GetsApple, SumExercise, Anagramm, CountLetters, Fibonacci
 
 test_apple = GetsApple()
 test_valami = SumExercise()
 test_anagramm = Anagramm()
 test_word = CountLetters()
+test_number = Fibonacci()
 
 class GetAppleTest(unittest.TestCase):
 
@@ -13,6 +14,7 @@ class GetAppleTest(unittest.TestCase):
 
     def test_filled(self):
         self.assertEqual(test_apple.get_apple(), 'apple')
+
 
 class SumExerciseTest(unittest.TestCase):
 
@@ -24,6 +26,7 @@ class SumExerciseTest(unittest.TestCase):
 
     def test_with_zero(self):
         self.assertEqual(test_valami.sum_numbers([0]), 0)
+
 
 class AnagrammTest(unittest.TestCase):
 
@@ -39,6 +42,7 @@ class AnagrammTest(unittest.TestCase):
     def test_if_strings_are_same(self):
         self.assertTrue(test_anagramm.is_anagramm('doggo','doggo'))
 
+
 class CountLettersTest(unittest.TestCase):
 
     def test_for_empty(self):
@@ -53,8 +57,15 @@ class CountLettersTest(unittest.TestCase):
     def test_for_empty(self):
         self.assertEqual(test_word.number_of_letters('aa'), {'a' : 2})
 
-        
-          
+
+class FibonacciTest(unittest.TestCase):
+
+    def test_fibonacci(self):
+        self.assertEqual(test_number.place_in_fibonacci(1), 1)
+
+    def test_fibonacci(self):
+        self.assertEqual(test_number.place_in_fibonacci(6), 8)
+
 
 if __name__ == '__main__':
     unittest.main()

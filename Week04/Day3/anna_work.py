@@ -72,5 +72,13 @@ class CountLetters:
                 output[element] = 1
         return output
 
+# Write a function that computes a member of the fibonacci sequence by a given index
+# Create tests that covers all types of input (like in the previous workshop exercise)
 
+class Fibonacci:
 
+    def place_in_fibonacci(self, num):
+        if num < 2:
+            return num
+        else:
+            return self.place_in_fibonacci(num-1) + self.place_in_fibonacci(num-2)
