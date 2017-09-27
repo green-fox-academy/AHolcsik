@@ -41,6 +41,22 @@ class SumExercise:
             output += element
         return output
         
+# Write a function, that takes two strings and returns a boolean value based on if the two strings are Anagramms or not.
+# Create a test for that.
+
+class Anagramm:
+
+    def is_anagramm(self, text1, text2):
+        if len(text1) == len(text2):
+            list_of_letters = []
+            for letter in text1:
+                list_of_letters.append(letter)
+            for letter in text2:
+                if letter in list_of_letters:
+                    list_of_letters.remove(letter)
+                if len(list_of_letters) == 0:
+                    return True
+        return False
 
 
 
