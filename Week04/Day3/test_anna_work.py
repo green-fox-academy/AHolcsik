@@ -4,9 +4,12 @@ from anna_work import GetsApple, SumExercise, Anagramm, CountLetters
 test_apple = GetsApple()
 test_valami = SumExercise()
 test_anagramm = Anagramm()
-test_word = CountLetters
+test_word = CountLetters()
 
 class GetAppleTest(unittest.TestCase):
+
+    # def test_empty(self):
+    #     self.assertEqual(test_apple.get_apple(), )
 
     def test_filled(self):
         self.assertEqual(test_apple.get_apple(), 'apple')
@@ -39,9 +42,19 @@ class AnagrammTest(unittest.TestCase):
 class CountLettersTest(unittest.TestCase):
 
     def test_for_empty(self):
-        self.assertTrue(test_word.number_of_letters(''), {})
+        self.assertEqual(test_word.number_of_letters(''), {})
 
+    def test_for_empty(self):
+        self.assertEqual(test_word.number_of_letters('a'), {'a' : 1})
 
+    def test_for_empty(self):
+        self.assertEqual(test_word.number_of_letters('ab'), {'a' : 1, 'b' : 1})
+
+    def test_for_empty(self):
+        self.assertEqual(test_word.number_of_letters('aa'), {'a' : 2})
+
+        
+          
 
 if __name__ == '__main__':
     unittest.main()

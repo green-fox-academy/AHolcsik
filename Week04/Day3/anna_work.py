@@ -64,5 +64,13 @@ class Anagramm:
 class CountLetters:
 
     def number_of_letters(self, string):
-        return
+        output = {}
+        for element in string:
+            if element in output:
+                output[element] += 1
+            else:
+                output[element] = 1
+        return output
+
+
 
