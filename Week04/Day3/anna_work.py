@@ -33,6 +33,15 @@ class GetsApple:
 # Run them
 # Fix your code if needed
 
+class SumExercise:
+
+    def sum_numbers(self, list):
+        output = 0
+        for element in list:
+            output += element
+        return output
+        
+
 
 
 
