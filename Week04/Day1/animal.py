@@ -7,8 +7,10 @@
 # Every animal can play() which increases both by one
 
 class Animal(object):
-    hunger = int(50)
-    thirst = int(50)
+
+    def __init__(self):
+        self.hunger = int(50)
+        self.thirst = int(50)
 
     def eat(self):
         self.hunger -= 1
