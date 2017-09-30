@@ -6,25 +6,43 @@
 # Every animal can drink() which decreases their thirst by one
 # Every animal can play() which increases both by one
 
-class Animal(object):
+class Animal():
 
-    def __init__(self):
-        self.hunger = int(50)
-        self.thirst = int(50)
+    def __init__(self, hunger = 50, thirst = 50, happiness = 50):
+        self.hunger = hunger
+        self.thirst = thirst
+        self.happiness = happiness
 
     def eat(self):
         self.hunger -= 1
-        print('om nom nom')
 
     def drink(self):
         self.thirst -=1
 
     def play(self):
-        self.hunger -= 1
-        self.thirst -= 1
+        self.hunger -= 2
+        self.thirst -= 2
+        self.happiness += 1
 
-cat = Animal()
-cat.play()
-cat.play()
-cat.eat()
-print(cat.hunger, cat.thirst)
+class Chicken(Animal):
+
+    def __init__(self, hunger = 50, thirst = 50, happiness = 50):
+        super().__init__(hunger, thirst, happiness)
+
+    def lay_egg(self):
+        pass
+
+class Cow(Animal):
+
+    def __init__(self, hunger = 50, thirst = 50, happiness = 50):
+        super().__init__(hunger, thirst, happiness)
+
+    def produce_milk(self):
+        pass
+
+
+chick = Chicken()
+chick.lay_egg
+
+
+print(chick.happiness)
