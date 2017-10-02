@@ -9,6 +9,12 @@ canvas.focus_set()
 floor = PhotoImage(file = 'floor.gif')
 wall = PhotoImage(file = 'wall.gif')
 hero_down = PhotoImage(file = 'hero-down.gif')
+hero_up = PhotoImage(file = 'hero-up.gif')
+hero_left = PhotoImage(file = 'hero-left.gif')
+hero_right = PhotoImage(file = 'hero-right.gif')
+boss = PhotoImage(file = 'boss.gif')
+skeleton = PhotoImage(file = 'skeleton.gif')
+
 
 def floor_piece(x, y, size):
     floo = canvas.create_image(x * size, y * size, image = floor)
