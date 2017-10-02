@@ -7,6 +7,7 @@ canvas.pack()
 
 floor = PhotoImage(file = 'floor.gif')
 wall = PhotoImage(file = 'wall.gif')
+hero_down = PhotoImage(file = 'hero-down.gif')
 
 def floor_piece(x, y, size):
     floo = canvas.create_image(x * size, y * size, image = floor)
@@ -36,5 +37,12 @@ map_layout = [[0,0,0,1,0,1,0,0,0,0],
               ]
 
 draw_whole_map(map_layout, 72, 72, 72)
+
+def place_hero(x, y):
+    hero = canvas.create_image(x, y, image = hero_down)
+
+
+
+place_hero(42, 42)
 
 root.mainloop()
