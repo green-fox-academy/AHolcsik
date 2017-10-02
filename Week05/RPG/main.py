@@ -47,13 +47,18 @@ draw_whole_map(map_layout, 72, 72, 72)
 
 class Hero_down:
     def __init__(self):
-        self.hero = None
+        self.look = hero_down
 
     def create_hero(self, x, y):
-        self.hero = canvas.create_image(x, y, image = hero_down)
+        self.hero = canvas.create_image(x, y, image = self.look)
 
     def move(self, dx, dy):
         canvas.move(self.hero, dx, dy)
+
+    def change_look(self, look):
+        self.look = look
+        canvas.itemconfigure(self.hero, image = self.look)
+
 
 Hero = Hero_down()
 Hero.create_hero(42, 42)
@@ -61,15 +66,22 @@ Hero.create_hero(42, 42)
 def on_key_press(e):
     if (e.keysym == 'Up'):
         Hero.move(0,-72)
+        Hero.look = hero_up
+        Hero.change_look(hero_up)
     elif (e.keysym == 'Down'):
         Hero.move(0,72)
+        Hero.look = hero_down
+        Hero.change_look(hero_down)
     elif (e.keysym == 'Left'):
-        Hero.move(-72,0)  
+        Hero.move(-72,0)
+        Hero.look = hero_left
+        Hero.change_look(hero_left)  
     elif (e.keysym == 'Right'):
         Hero.move(72,0)
+        Hero.look = hero_right
+        Hero.change_look(hero_right)
 
 
-# place_hero(42, 42)
 
 root.bind("<KeyPress>", on_key_press)
 
