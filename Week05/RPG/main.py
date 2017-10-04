@@ -109,17 +109,29 @@ class Skeleton():
         else:
             self.create_skeleton()
         
+class Boss():
 
+    def __init__(self):
+        self.image = boss
 
-
-    # def move(self, x, y):
-    #     self.coord_x += x
-    #     self.coord_y += y
-    #     canvas.move(self.hero, x * size, y * size)
+    def create_boss(self):
+        random_x = random.randint(0,9)
+        random_y = random.randint(0,8)
+        if is_in_border_floor(random_x, random_y) == True:
+            x = 42 + size * random_x
+            y = 42 + size * random_y
+            self.boss = canvas.create_image(x, y, image = self.image)
+        else:
+            self.create_boss()
 
 
 skeleton = Skeleton()
 skeleton.create_skeleton()
+skeleton.create_skeleton()
+skeleton.create_skeleton()
+
+boss = Boss()
+boss.create_boss()
 
 root.bind("<KeyPress>", on_key_press)
 
