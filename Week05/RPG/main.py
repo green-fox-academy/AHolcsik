@@ -45,23 +45,29 @@ map_layout = [[0,0,0,1,0,1,0,0,0,0],
 
 draw_whole_map(map_layout, 72, 72, 72)
 
-class Hero_down:
+class Hero:
     def __init__(self):
+        self.coord_x = 0
+        self.coord_y = 0
         self.look = hero_down
 
-    def create_hero(self, x, y):
+    def create_hero(self):
+        x = 42
+        y = 42
         self.hero = canvas.create_image(x, y, image = self.look)
 
-    def move(self, dx, dy):
-        canvas.move(self.hero, dx, dy)
+    def move(self, x, y):
+        self.coord_x += x
+        self.coord_y += y
+        canvas.move(self.hero, x, y)
 
     def change_look(self, look):
         self.look = look
         canvas.itemconfigure(self.hero, image = self.look)
 
 
-Hero = Hero_down()
-Hero.create_hero(42, 42)
+Hero = Hero()
+Hero.create_hero()
 
 def on_key_press(e):
     coords = canvas.coords(Hero)
