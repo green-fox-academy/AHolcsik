@@ -64,6 +64,7 @@ Hero = Hero_down()
 Hero.create_hero(42, 42)
 
 def on_key_press(e):
+    coords = canvas.coords(Hero)
     if (e.keysym == 'Up'):
         Hero.move(0,-72)
         Hero.look = hero_up
@@ -81,11 +82,14 @@ def on_key_press(e):
         Hero.look = hero_right
         Hero.change_look(hero_right)
 
+# def hero_place(x, y):
+#     if x in range(len())
+
+
+
+
 
 
 root.bind("<KeyPress>", on_key_press)
-
-
-
 
 root.mainloop()
