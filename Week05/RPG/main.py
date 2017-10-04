@@ -1,4 +1,5 @@
 from tkinter import *
+import random
 
 
 root = Tk()
@@ -42,17 +43,15 @@ map_layout = [[0,0,0,1,0,1,0,0,0,0],
               ]
 
 def is_in_border_floor(x, y):
-    if 0 <= x <= 9 and 0 <= y <= 9:
+    if 0 <= x <= 9 and 0 <= y <= 8:
         if map_layout[y][x] == 0:
             return True
 
 
-
-draw_whole_map(map_layout, 72)
+size = 72
+draw_whole_map(map_layout, size)
 
 class Hero:
-
-    size = 72
 
     def __init__(self):
         self.coord_x = 0
@@ -67,7 +66,7 @@ class Hero:
     def move(self, x, y):
         self.coord_x += x
         self.coord_y += y
-        canvas.move(self.hero, x * self.size, y * self.size)
+        canvas.move(self.hero, x * size, y * size)
 
     def change_look(self, look):
         self.look = look
@@ -95,12 +94,32 @@ def on_key_press(e):
             Hero.look = hero_right
             Hero.change_look(hero_right)
 
+class Skeleton():
+
+    def __init__(self):
+        self.image = skeleton
+
+    def create_skeleton(self):
+        random_x = random.randint(0,9)
+        random_y = random.randint(0,8)
+        if is_in_border_floor(random_x, random_y) == True:
+            x = 42 + size * random_x
+            y = 42 + size * random_y
+            self.skeleton = canvas.create_image(x, y, image = self.image)
+        else:
+            self.create_skeleton()
+        
 
 
 
+    # def move(self, x, y):
+    #     self.coord_x += x
+    #     self.coord_y += y
+    #     canvas.move(self.hero, x * size, y * size)
 
 
-
+skeleton = Skeleton()
+skeleton.create_skeleton()
 
 root.bind("<KeyPress>", on_key_press)
 
