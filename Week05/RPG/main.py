@@ -1,6 +1,6 @@
 from tkinter import *
 from view import Map 
-from entity import Hero
+from entity import Hero, Skeleton
 
 class Game(object):
 
@@ -13,12 +13,10 @@ class Game(object):
         self.map.draw_map(canvas)
         self.hero = Hero(canvas)
         self.hero.create_hero()
-        # self.skeleton = Skeleton(canvas)
-        # self.boss = Boss(canvas)
-        # self.skeleton_number = 3
-        # self.spots = self.map.create_enemy_spots(self.skeleton_number + 1)
-        # self.skeleton.draw(self.spots[:-1])
-        # self.boss.draw(self.spots[-1])
+        self.skeleton = Skeleton(canvas)
+        self.skeleton_number = 3
+        self.spawn_spots = self.map.create_spawn_spots(self.skeleton_number)
+        self.skeleton.spawn_skeleton(self.spawn_spots[:-1])
     
         root.bind("<KeyPress>", self.on_key_press)
         canvas.pack(padx = 1, pady = 0.6)

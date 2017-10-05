@@ -1,4 +1,5 @@
 from tkinter import *
+import random
 
 class Map():
 
@@ -31,4 +32,12 @@ class Map():
         if 0 <= x <= 9 and 0 <= y <= 8:
             if self.map_layout[y][x] == 0:
                 return True
-       
+
+    def create_spawn_spots(self, skeleton_number):
+        spawn_spots = []
+        while len(spawn_spots) != skeleton_number:
+            random_x = random.randint(0,9)
+            random_y = random.randint(0,8)
+            if self.is_in_border_floor(random_x, random_y) == True and [random_x, random_y] not in spawn_spots and [random_x, random_y] != [0,0]:
+                spawn_spots.append ([random_x * self.tile_size, random_y * self.tile_size])
+        return spawn_spots

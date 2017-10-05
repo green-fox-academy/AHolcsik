@@ -1,5 +1,6 @@
 from tkinter import *
 from view import Map
+import random
 
 class Entity():
 
@@ -34,13 +35,16 @@ class Hero(Entity):
         self.hero_image = hero_image
         self.canvas.itemconfigure(self.hero, image = self.hero_image)
 
+class Skeleton(Entity):
 
-    # def change_image(self, direction):
-    #     if direction == 'up':
-    #         self.canvas.itemconfigure(self.hero_image, image = self.hero_up)
-    #     if direction == 'down':
-    #         self.canvas.itemconfigure(self.hero_image, image = self.hero_down)
-    #     if direction == 'left':
-    #         self.canvas.itemconfigure(self.hero_image, image = self.hero_left)
-    #     if direction == 'right':
-    #         self.canvas.itemconfigure(self.hero_image, image = self.hero_right)
+    def __init__(self, canvas):
+        super(Skeleton, self).__init__()
+        self.x = 0
+        self.y = 0
+        self.skeleton = PhotoImage(file = 'skeleton.gif')
+        self.canvas = canvas
+
+    def spawn_skeleton(self, spawn_spots):
+        for i in range(len(spawn_spots)):
+            self.skeleton = self.canvas.create_image(spawn_spots[i][0], spawn_spots[i][1], image = self.skeleton)
+
