@@ -1,6 +1,6 @@
 from tkinter import *
 from view import Map 
-# from entity import 
+from entity import Hero
 
 class Game(object):
 
@@ -11,8 +11,8 @@ class Game(object):
         canvas = Canvas(root, width=canvas_width, height=canvas_height)
         self.map = Map()
         self.map.draw_map(canvas)
-        # self.hero = Hero(canvas)
-        # self.hero.draw(0, 0)
+        self.hero = Hero(canvas)
+        self.hero.create_hero()
         # self.skeleton = Skeleton(canvas)
         # self.boss = Boss(canvas)
         # self.skeleton_number = 3

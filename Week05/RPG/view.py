@@ -27,8 +27,8 @@ class Map():
                 elif str(value) == '1':
                     canvas.create_image(self.tile_size / 2 + j * self.tile_size, self.tile_size / 2 + i * self.tile_size, image = self.wall_tile)     
 
-# def is_in_border_floor(x, y):
-#     if 0 <= x <= 9 and 0 <= y <= 8:
-#         if map_layout[y][x] == 0:
-#             return True
+    def is_in_border_floor(self, x, y):
+        if 0 <= x <= 9 and 0 <= y <= 8:
+            if self.map_layout[y][x] == 0:
+                return True
        
