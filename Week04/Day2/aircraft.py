@@ -1,9 +1,11 @@
 
 class Aircraft():
-    def __init__(self, ammo, base_damage, damage):
+    def __init__(self, max_ammo, base_damage, aircraft_type):
+        self.max_ammo = max_ammo
+        self.aircraft_type = aircraft_type
         self.ammo = 0
         self.base_damage = base_damage
-        self.damage = damage
+
 
     def fight(self):
         pew_pew = self.ammo * self.base_damage
@@ -16,31 +18,25 @@ class Aircraft():
         return (number - difference)
 
     def get_type(self):
-        return self.type
+        return self.aircraft_type
 
     def status(self):
-        return 'Type: ' + self.type + ', Ammo: ' + str(self.ammo) + ', Base Damage: ' + str(self.base_damage) + ', All Damage: ' + str(self.fight())
+        return 'Type: ' + self.aircraft_type + ', Ammo: ' + str(self.ammo) + ', Base Damage: ' + str(self.base_damage) + ', All Damage: ' + str(self.fight())
 
 
 class F16 (Aircraft):
 
-    def __init__(self, ammo, damage = 0, max_ammo = 8, base_damage = 30, type = 'F16'):
-        super().__init__(self, ammo, damage)
-        self.max_ammo = max_ammo
-        self.base_damage = base_damage
-        self.damage = damage
-        self.type = type
+    def __init__(self):
+        super(F16, self).__init__(8, 30, 'F16')
+        
 
 class F35 (Aircraft):
-    def __init__(self, ammo, damage = 0, max_ammo = 12, base_damage = 50, type = 'F35'):
-        super().__init__(self, ammo, damage)
-        self.max_ammo = max_ammo
-        self.base_damage = base_damage
-        self.damage = damage
-        self.type = type
+    def __init__(self):
+        super(F35, self).__init__(12, 50, 'F35')
+
         
-pityu = F35(Aircraft)
-lil_g = F16(Aircraft)
+pityu = F35()
+lil_g = F16()
 print(pityu.fight())
 print(pityu.refill(200))
 print(pityu.status())

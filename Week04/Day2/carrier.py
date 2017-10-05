@@ -7,15 +7,18 @@ class Carrier():
         self.ammo_stored = ammo_stored
         self.health_point = health_point
 
-    def add_aircraft(self, aircraft_type):
-        return self.stored_crafts(aircraft_type.status(aircraft_type))
+    def add_aircraft(self, x):
+        if x == self.aircraft.aircraft_type(x):
+            self.stored_crafts.append (F16.status())
+        elif x == self.aircraft.aircraft_type(x):
+            self.stored_crafts.append (F35.status())
+        return self.stored_crafts
 
 
-        # if x == aircraft_type(x):
-        #     self.stored_crafts.append (F16.status())
-        # elif x == aircraft_type(x):
-        #     self.stored_crafts.append (F35.status())
-        # return self.stored_crafts
+        # return self.stored_crafts(aircraft_type.status(aircraft_type))
+
+
+        
 
 
 
