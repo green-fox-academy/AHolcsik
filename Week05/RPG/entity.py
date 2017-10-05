@@ -21,15 +21,26 @@ class Hero(Entity):
         self.canvas = canvas
 
     def create_hero(self):
-        x = 36
-        y = 36
-        self.hero = self.canvas.create_image(x, y, image = self.hero_down)
+        x = 0
+        y = 0
+        self.hero = self.canvas.create_image(x + 36, y + 36, image = self.hero_down)
 
     def move(self, x, y):
-        self.coord_x += x
-        self.coord_y += y
-        self.canvas.move(self.hero, x * size, y * size)
+        self.x += x
+        self.y += y
+        self.canvas.move(self.hero, x * 72, y * 72)
 
-    def change_look(self, look):
-        self.look = look
+    def change_image(self, hero_image):
+        self.hero_image = hero_image
         self.canvas.itemconfigure(self.hero, image = self.hero_image)
+
+
+    # def change_image(self, direction):
+    #     if direction == 'up':
+    #         self.canvas.itemconfigure(self.hero_image, image = self.hero_up)
+    #     if direction == 'down':
+    #         self.canvas.itemconfigure(self.hero_image, image = self.hero_down)
+    #     if direction == 'left':
+    #         self.canvas.itemconfigure(self.hero_image, image = self.hero_left)
+    #     if direction == 'right':
+    #         self.canvas.itemconfigure(self.hero_image, image = self.hero_right)

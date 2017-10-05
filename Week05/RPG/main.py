@@ -19,41 +19,40 @@ class Game(object):
         # self.spots = self.map.create_enemy_spots(self.skeleton_number + 1)
         # self.skeleton.draw(self.spots[:-1])
         # self.boss.draw(self.spots[-1])
-
-        # def on_key_press(self, e):
-        #     if (e.keysym == 'Up') and is_in_border_floor(Hero.coord_x, Hero.coord_y -1) == True:
-        #         Hero.move(0,-1)
-        #         Hero.look = hero_up
-        #         Hero.change_look(hero_up)
-        #     elif (e.keysym == 'Down') and is_in_border_floor(Hero.coord_x, Hero.coord_y +1) == True:
-        #         Hero.move(0,1)
-        #         Hero.look = hero_down
-        #         Hero.change_look(hero_down)
-        #     elif (e.keysym == 'Left') and is_in_border_floor(Hero.coord_x -1, Hero.coord_y) == True:
-        #         Hero.move(-1,0)
-        #         Hero.look = hero_left
-        #         Hero.change_look(hero_left)  
-        #     elif (e.keysym == 'Right') and is_in_border_floor(Hero.coord_x +1, Hero.coord_y) == True:
-        #         Hero.move(1,0)
-        #         Hero.look = hero_right
-        #         Hero.change_look(hero_right)
-
-
-
-        # root.bind("<KeyPress>", self.on_key_press)
+    
+        root.bind("<KeyPress>", self.on_key_press)
         canvas.pack(padx = 1, pady = 0.6)
         root.mainloop()
 
+    def on_key_press(self, e):
+        if (e.keysym == 'Up'):
+            self.hero.change_image(self.hero.hero_up)
+            if self.map.is_in_border_floor(self.hero.x, self.hero.y - 1) == True:
+                self.hero.move(0,-1)
+        elif (e.keysym == 'Down'):
+            self.hero.change_image(self.hero.hero_down)
+            if self.map.is_in_border_floor(self.hero.x, self.hero.y + 1) == True:
+                self.hero.move(0,1)
+        elif (e.keysym == 'Left'):
+            self.hero.change_image(self.hero.hero_left)
+            if self.map.is_in_border_floor(self.hero.x - 1, self.hero.y) == True:
+                self.hero.move(-1,0)
+        elif (e.keysym == 'Right'):
+            self.hero.change_image(self.hero.hero_right)
+            if self.map.is_in_border_floor(self.hero.x + 1, self.hero.y) == True:
+                self.hero.move(1,0)
+
+
+
+
+        
+        
 
 
 
 
 
-
-
-
-
-
+    
 
 
 game = Game()
