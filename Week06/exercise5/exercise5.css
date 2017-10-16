@@ -1,0 +1,42 @@
+body {
+    width: 540px;
+    margin: auto;
+}
+
+.header {
+    height: 100px;
+    background-color: #00ffff;
+}
+
+.container {
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+
+}
+.main {
+    width: 300px;
+    background-color: #ff0000;
+}
+
+.side {
+    width: 100px;
+}
+
+.left {
+    background-color: #ffa400;
+}
+
+.right {
+    background-color: #8b007e; 
+}
+
+.box {
+    background-color: #000;
+}
+
+.footer {
+    height: 100px;
+    background-color: #3900ff;
+
+}
