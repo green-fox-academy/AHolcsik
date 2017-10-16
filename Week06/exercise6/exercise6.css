@@ -6,7 +6,6 @@
     height: 55px;
     width: 100%;
     background-color: #c000ff;
-    justify-content: flex-start;
     align-items: center;
     position: fixed;
     top: 0;
@@ -14,6 +13,7 @@
 }
 
 .navigation {
+    justify-content: flex-start;
     display: flex;
     height: 25px;
     background-color: #00eeff;
@@ -35,6 +35,17 @@
 
 .third {
     width: 85px;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fb, .tw {
+    width: 30px;
+    height: 30px;
+    background-color: #00eeff;
 }
 
 .container {
