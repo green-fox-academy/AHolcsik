@@ -20,6 +20,10 @@
     margin-left: 10px;
 }
 
+.first, .second, .third {
+    margin-left: 30px;
+}
+
 .first {
     width: 95px;
     
