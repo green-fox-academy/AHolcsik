@@ -1,0 +1,19 @@
+ul {
+    list-style: none;
+}
+
+.container {
+    height: 280px;
+    display: flex;
+    background-color: #ffda0c;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px;
+}
+
+.item {
+    background-color: #c000ff;
+    width: 100px;
+    height: 100px;
+    margin-right: 7px;
+}
