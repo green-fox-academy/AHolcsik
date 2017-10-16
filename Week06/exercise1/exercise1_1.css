@@ -1,0 +1,9 @@
+div.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  div.item {
+    align-self: flex-end;
+  }
