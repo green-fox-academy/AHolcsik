@@ -1,5 +1,4 @@
 
-
 .header {
     margin: auto;
     display: flex;
@@ -13,7 +12,7 @@
     left: 0;
 }
 
-.navigation {
+.nav {
     height: 25px;
     background-color: #00eeff;
     margin-left: 10px;
@@ -33,25 +32,21 @@
 
 .container {
     display: flex;
-    width: 750px;
+    width: 680px;
     height: 600px;
     margin: auto;
 }
 
-.main, .side {
-    flex: auto;
-}
-
 .main {
     background-color: #ffda0c;
-
+    width: 450px;
+    margin: 10px 0 10px 5px;
 }
 
 .side {
     background-color: #00e019;
     width: 230px;
-    flex-grow: 0;
-    flex-shrink: 0;
+    margin: 10px 5px 10px 0;
 }
 
 .footer {
