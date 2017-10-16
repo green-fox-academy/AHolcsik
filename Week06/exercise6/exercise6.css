@@ -1,0 +1,45 @@
+.header {
+    margin: auto;
+    display: flex;
+    width: 680px;
+    height: 55px;
+    background-color: #c000ff;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav {
+    height: 25px;
+    background-color: #00eeff;
+    margin-left: 10px;
+}
+
+.first {
+    width: 95px;
+}
+
+.second {
+    width: 75px;
+}
+
+.third {
+    width: 85px;
+}
+
+.container {
+    display: flex;
+    width: 680px;
+    height: 500px;
+    background-color: peachpuff;
+    margin: auto;
+}
+
+.main {
+    background-color: #ffda0c;
+    width: 450px;
+}
+
+.side {
+    background-color: #00e019;
+    width: 230px;
+}
