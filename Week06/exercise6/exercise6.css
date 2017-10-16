@@ -1,11 +1,15 @@
+
 .header {
     margin: auto;
     display: flex;
-    width: 680px;
     height: 55px;
+    width: 100%;
     background-color: #c000ff;
     justify-content: flex-start;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .nav {
@@ -29,17 +33,25 @@
 .container {
     display: flex;
     width: 680px;
-    height: 500px;
-    background-color: peachpuff;
+    height: 600px;
     margin: auto;
 }
 
 .main {
     background-color: #ffda0c;
     width: 450px;
+    margin: 10px 0 10px 5px;
 }
 
 .side {
     background-color: #00e019;
     width: 230px;
+    margin: 10px 5px 10px 0;
+}
+
+.footer {
+    height: 55px;
+    width: 680px;
+    background-color: #ccc;
+    margin: auto;
 }
