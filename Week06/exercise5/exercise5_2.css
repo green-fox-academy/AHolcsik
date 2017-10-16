@@ -1,0 +1,53 @@
+body {
+    margin: auto;
+}
+
+.header {
+    height: 100px;
+    background-color: #00ffff;
+}
+
+.container {
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+
+}
+
+.part {
+    flex: 1 1 auto;
+}
+
+.main {
+    flex-basis: 300px;
+    background-color: #ff0000;
+    margin: 0 20 0 20;
+    position: relative;
+}
+
+.left, .right {
+    width: 100px;
+}
+
+.left {
+    background-color: #ffa400;
+}
+
+.right {
+    background-color: #8b007e; 
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    
+}
+
+.footer {
+    height: 100px;
+    background-color: #3900ff;
+}
