@@ -11,30 +11,32 @@ body {
     display: flex;
     height: 500px;
     justify-content: space-between;
-
 }
 
 .part {
-    flex: 1 1 auto;
+    flex: auto;
 }
 
 .main {
     flex-basis: 300px;
     background-color: #ff0000;
-    margin: 0 20 0 20;
     position: relative;
 }
 
 .left, .right {
     width: 100px;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 .left {
     background-color: #ffa400;
+    margin-right: 20px;
 }
 
 .right {
     background-color: #8b007e; 
+    margin-left: 20px;
 }
 
 .box {
@@ -44,7 +46,6 @@ body {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    
 }
 
 .footer {
