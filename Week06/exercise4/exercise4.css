@@ -1,10 +1,24 @@
-.header {
-    background-color: #c000ff;
+.container {
+    display: flex;
+    width: 680px;
+    background-color: peachpuff;
+    margin: auto;
 }
 
-.item {
+.header {
+    display: flex;
+    width: 680px;
+    height: 55px;
+    background-color: #c000ff;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav {
     height: 25px;
     background-color: #00eeff;
+    margin: 5px;
+
 
 }
 
@@ -12,11 +26,11 @@
     width: 95px;
 }
 
-.first {
+.second {
     width: 75px;
 }
 
-.first {
+.third {
     width: 85px;
 }
 
