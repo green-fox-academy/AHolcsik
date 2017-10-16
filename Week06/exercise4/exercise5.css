@@ -1,3 +1,8 @@
+body {
+    width: 540px;
+    margin: auto;
+}
+
 .header {
     background-color: #00ffff;
 
@@ -12,7 +17,7 @@
 
 }
 
-.center {
+.main {
     background-color: #ff0000;
 }
 
@@ -25,7 +30,7 @@
 
 }
 
-.base {
+.footer {
     background-color: #3900ff;
 
 }
