@@ -1,8 +1,5 @@
 .header {
-
-}
-
-.nav {
+    background-color: #00ffff;
 
 }
 
@@ -11,13 +8,24 @@
 }
 
 .left {
+    background-color: #ffa400;
 
 }
 
 .center {
+    background-color: #ff0000;
+}
 
+.box {
+    background-color: #000;
 }
 
 .right {
+    background-color: #8b007e;
+
+}
+
+.base {
+    background-color: #3900ff;
 
 }
