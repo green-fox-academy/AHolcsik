@@ -21,3 +21,39 @@ ul {
     background-color: #00eeff;
     margin-left: 20px;
 }
+
+.container {
+    width: 670px;
+}
+
+.section {
+    display: flex;
+    width: 670px;
+    margin: 40px;
+}
+
+.first {
+    flex: 1 1 auto;
+    background-color: green;
+}
+
+.block1 {
+    flex: 2;
+    height: 220px;
+    background-color: green;
+    margin: 5px;
+}
+
+.block2 {
+    flex: 1;
+    height: 220px;
+    background-color: green;
+    margin: 5px;
+}
+
+.block3 {
+    flex: 1;
+    height: 220px;
+    background-color: green;
+    margin: 5px;
+}
