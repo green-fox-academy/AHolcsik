@@ -1,11 +1,5 @@
-.container {
-    display: flex;
-    width: 680px;
-    background-color: peachpuff;
-    margin: auto;
-}
-
 .header {
+    margin: auto;
     display: flex;
     width: 680px;
     height: 55px;
@@ -17,9 +11,7 @@
 .nav {
     height: 25px;
     background-color: #00eeff;
-    margin: 5px;
-
-
+    margin-left: 10px;
 }
 
 .first {
@@ -34,12 +26,20 @@
     width: 85px;
 }
 
+.container {
+    display: flex;
+    width: 680px;
+    height: 500px;
+    background-color: peachpuff;
+    margin: auto;
+}
+
 .main {
     background-color: #ffda0c;
-
+    width: 450px;
 }
 
 .side {
     background-color: #00e019;
-
+    width: 230px;
 }
