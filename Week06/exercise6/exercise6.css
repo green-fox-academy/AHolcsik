@@ -20,6 +20,7 @@
     margin-left: 10px;
 }
 
+
 .first, .second, .third {
     margin-left: 30px;
 }
@@ -50,13 +51,14 @@
 
 .container {
     display: flex;
-    width: 750px;
-    height: 600px;
-    margin: auto;
+    width: 680px;
+    height: 850px;
+    margin: 30px auto 0 auto;
 }
 
 .main, .side {
     flex: auto;
+    
 }
 
 .main {
@@ -64,11 +66,39 @@
 
 }
 
+p {
+    padding: 30px 10px 0 10px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.square {
+    height: 80px;
+    flex: 1 1 auto;
+    flex-basis: 80px;
+    margin: 10px;
+    background-color: red;
+}
+
+.column {
+    column-count: 2;
+}
+
 .side {
     background-color: #00e019;
     width: 230px;
     flex-grow: 0;
     flex-shrink: 0;
+    padding-top: 50px;
+}
+
+.bar {
+    height: 40px;
+    background-color: #5c2e50;
+    margin: 5px 10px 5px 10px;
 }
 
 .footer {
