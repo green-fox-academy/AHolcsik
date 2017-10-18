@@ -1,0 +1,33 @@
+body {
+    background-color: #444;
+}
+
+.button {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    
+}
+
+.box {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 130px;
+    height: 130px;
+    border-radius: 6px;
+    background-color: #eee;
+    transform: rotate(45deg);
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
