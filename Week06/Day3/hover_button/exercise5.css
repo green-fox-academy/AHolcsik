@@ -2,11 +2,29 @@ body {
     background-color: #444;
 }
 
+
 .button {
     position: absolute;
     top: 30%;
     left: 50%;
     
+}
+
+.border {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 124px;
+    height: 124px;
+    border-radius: 6px;
+    border: 3px solid #F36145;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+.border:hover {
+    transform: rotate(45deg);
 }
 
 .box {
