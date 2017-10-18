@@ -11,30 +11,38 @@ body {
 }
 
 .button {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
     margin: 30px;
     width: 140px;
     height: 50px;
     border-radius: 5px;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     flex-grow: 0;
     flex-shrink: 0;
+    color: #ddd;
 
 }
 
 .blue {
     background-color: #49579e;
+    box-shadow: 0 5px 0 #363899, 2px 7px 5px #181938;
 }
 
 .green {
     background-color: #00b65e;
+    box-shadow:  0 5px 0 #369978, 2px 7px 5px #181938;
 }
 
 .red {
     background-color: #dd281b;
+    box-shadow: 0 5px 0 #9c322f, 2px 7px 5px #181938;
 }
 
-.light {
+/* .light {
     background-color: #00aff0;
+    box-shadow: 0 5px 0 #322a61;
 }
 
 .black {
@@ -43,4 +51,4 @@ body {
 
 .white {
     background-color: #e3e8f7;
-}
+} */
