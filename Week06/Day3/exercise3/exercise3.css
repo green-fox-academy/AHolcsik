@@ -1,0 +1,46 @@
+body {
+    background-color: #322a61;
+}
+
+.container {
+    margin: 40px auto 0 auto;
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.button {
+    margin: 30px;
+    width: 140px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+}
+
+.blue {
+    background-color: #49579e;
+}
+
+.green {
+    background-color: #00b65e;
+}
+
+.red {
+    background-color: #dd281b;
+}
+
+.light {
+    background-color: #00aff0;
+}
+
+.black {
+    background-color: #27282a;
+}
+
+.white {
+    background-color: #e3e8f7;
+}
