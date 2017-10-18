@@ -11,33 +11,35 @@ body {
 }
 
 .button {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     margin: 30px;
     width: 140px;
     height: 50px;
-    border-radius: 5px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     flex-grow: 0;
     flex-shrink: 0;
-    color: #ddd;
-
+    color: rgb(209, 234, 248);
 }
 
 .blue {
     background-color: #49579e;
-    box-shadow: 0 5px 0 #363899, 2px 7px 5px #181938;
+    box-shadow: 0 5px 0 #364d99, 2px 7px 5px #181938, inset 0px 2px 3px rgba(255,255,255,.2);
+    background-image: linear-gradient(to bottom, #49579e, rgb(29, 100, 155));
 }
 
 .green {
     background-color: #00b65e;
-    box-shadow:  0 5px 0 #369978, 2px 7px 5px #181938;
+    box-shadow:  0 5px 0 #369978, 2px 7px 5px #181938, inset 0px 2px 3px rgba(255,255,255,.2);
+    background-image: linear-gradient(to bottom, #00b65e, rgb(29, 158, 85));
 }
 
 .red {
     background-color: #dd281b;
-    box-shadow: 0 5px 0 #9c322f, 2px 7px 5px #181938;
+    box-shadow: 0 5px 0 #721a19, 2px 7px 5px #181938, inset 0px 2px 3px rgba(255,255,255,.2);
+    background-image: linear-gradient(to bottom, #dd281b, rgb(148, 29, 21));
 }
 
 /* .light {
