@@ -7,12 +7,25 @@ body {
 
 .header {
     position: fixed;
-    top: 400px;
+    top: 0;
     left: 0;
-    height: 50px;
     width: 100%;
+    bottom: auto;
     background-color: #111;
 }
+
+.outer {
+    position: relative;
+    height: 50px;
+}
+
+.outer, .header {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    top: auto;
+}
+
 
 ul, il {
     list-style: none;
@@ -31,14 +44,44 @@ li {
     margin: auto 40px auto 40px;
 
 }
+
 /* 
 li:hover {
     background-color: #666;
 
 } */
 
+.container {
+    position: absolute;
+    top:450px;
+    left: 0;
+    display: grid;
+    background-color: #333;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(3, minmax(300px, auto));
+    grid-template-areas: 'left picture'
+                         'left upper'
+                         'left lower'
+}
 
+.left {
+    padding: 30px;
+    grid-area: left;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+.upper {
+    grid-area: upper;
+}
+
+.lower {
+    grid-area: lower;
+}
+
+.picture {
+    grid-area: pircture;
+}
 
 
 /* @media screen and (max-width: 1000px) {
