@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    background: url(images/background.jpg);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.header {
+    position: fixed;
+    top: 400px;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #111;
+}
+
+ul, il {
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+}
+
+li {
+    color: #eee;
+    margin: auto 40px auto 40px;
+
+}
+/* 
+li:hover {
+    background-color: #666;
+
+} */
+
+
+
+
+
+/* @media screen and (max-width: 1000px) {
+    #body {
+        background-size: contain;
+    }
+} */
