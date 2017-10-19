@@ -22,9 +22,8 @@
 
 .box {
     height: 175px;
-    width: 410px;
+    width: 65%;
     background-color: yellow;
-    flex-shrink: 1;
 }
 
 .second {
