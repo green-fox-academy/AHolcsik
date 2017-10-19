@@ -1,0 +1,11 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(125px, auto));
+    grid-template-rows: repeat(6, minmax(110px auto));
+    background-color: #222;
+    grid-gap: 1px;
+}
+
+.box {
+    background-color: yellow;
+}
