@@ -1,0 +1,48 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 130px);
+    grid-gap: 8px;
+    background-color: #333;
+    grid-template-areas: 'first big big'
+                         'second big big'
+                         'third fourth fifth'
+}
+
+.purple {
+    background-color: rgb(192, 43, 192);
+}
+
+.big {
+    background-color: rgb(47, 201, 47);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.box {
+    height: 175px;
+    width: 410px;
+    background-color: yellow;
+    flex-shrink: 1;
+}
+
+.second {
+    grid-area: second;
+}
+
+.third {
+    grid-area: third;
+}
+
+.fourth {
+    grid-area: fourth;
+}
+
+.fifth {
+    grid-area: fifth;
+}
+
+.big {
+    grid-area: big;
+}
