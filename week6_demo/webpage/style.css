@@ -10,7 +10,7 @@ body {
 
 .bg {
     margin-top: -60px;
-    width: 100%;
+    width: 1300px;
     z-index: 3;
     position: relative
 }
@@ -35,7 +35,7 @@ body {
     align-items: center;
     height: 50px;
     position: relative;
-    top: 430px;
+    top: 490px;
     width: 100%;
     color: white;
     background-color: black;
@@ -67,7 +67,7 @@ li:hover {
 
 .container {
     position: absolute;
-    top:460px;
+    top:530px;
     left: 0;
     display: grid;
     background-color: #333;
