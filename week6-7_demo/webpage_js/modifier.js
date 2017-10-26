@@ -1,4 +1,4 @@
-var wrap = $("#wrap");
+var wrap = ("#wrap");
 
 wrap.on("scroll", function(e) {
     
