@@ -42,7 +42,7 @@ li:hover {
                          'footer footer'
 }
 
-.navigation {
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,6 +53,14 @@ li:hover {
     color: white;
     background-color: black;
     grid-area: nav;
+}
+
+.fixed {
+    top:0;
+    left:0;
+    position:fixed; 
+    width: 100%;
+    z-index: 10;
 }
 
 .article {
