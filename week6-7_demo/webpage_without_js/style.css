@@ -7,6 +7,8 @@ body {
     margin-top: -60px;
     width: 1400px;
     position: relative;
+    top: 0;
+    left: 0;
     z-index: 3;
 }
 
@@ -93,12 +95,12 @@ li:hover {
     font-size: 18px;
 }
 
-.pic {
+/* .pic {
     position: relative;
     grid-area: picture;
     width: 350px;
     padding: 50px;
-}
+} */
 
 .footer {
     grid-area: footer;
@@ -108,4 +110,13 @@ li:hover {
     font-size: 30px;
     color: #ccc;
     height: 40px;
+}
+
+.pics {
+    display: flex;
+    justify-content: center center;
+}
+
+.pics img {
+    margin: 50px;
 }

@@ -1,10 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(background.jpg) no-repeat center center fixed;
+    background: url(caption_back.jpg) no-repeat center center fixed;
     background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;    
 }
-
 
 ul, il {
     list-style: none;
@@ -60,11 +60,10 @@ nav {
     left:0;
     position:fixed; 
     width: 100%;
-    z-index: 10;
+    z-index: 1;
 }
 
 .article {
-    font-family: Arial, Helvetica, sans-serif;    
     color: #fff;
     text-align: justify;
     line-height: 30px;
@@ -99,4 +98,12 @@ nav {
     font-size: 30px;
     color: #ccc;
     height: 40px;
+}
+
+.demo img {
+    margin-left: 200px;
+    margin-right: 40px;
+    margin: 50px;
+
+
 }
