@@ -1,0 +1,33 @@
+.container {
+    width: 500px;
+    min-height: 300px;
+    margin: auto;
+    background: #ddd;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, auto));
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'left main right'
+                         'thumbnail thumbnail thumbnail'
+}
+
+.main {
+    height: 200px;
+    width: 500px;
+    grid-area: main;
+    background: greenyellow;
+}
+
+.left {
+    grid-area: left;
+    background: peachpuff;
+}
+
+.right {
+    grid-area: right;
+    background: peachpuff;
+}
+
+thumbnail {
+    grid-area: thumbnail;
+    background: midnightblue;
+}
