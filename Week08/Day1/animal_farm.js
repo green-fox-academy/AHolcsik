@@ -8,28 +8,58 @@
 //  - Every animal can `drink()` which decreases their thirst by one
 //  - Every animal can `play()` which increases both by one
 
-class animalFarm {
+class Animal {
 
-    constructor(type) {
-        this.type = type;
+    constructor() {
         this.hunger = 5;
         this.thirst = 5;
     }
 
-    eat() {
+    eat () {
         this.hunger -= 1;
     }
 
-    drink() {
+    drink () {
         this.thirst -= 1;
     }
 
-    play() {
+    play () {
         this.hunger += 1;
         this.thirst += 1;
     }
+}
+
+class Farm {
+    
+    constructor(allSlots) {
+        this.allSlots = allSlots;
+        this.listAnimals = [];
+        for (let i = 0; i < this.allSlots; i++) {
+            this.listAnimals.push(new Animal())
+        }
+    }
+
+    breed () {
+        let animalsNumber = length.listAnimals;
+        if (animalsNumber <= this.allSlots) {
+            let Sheep = new Animal;
+            push.this.listAnimals(Sheep)
+            this.allSlots -= 1;
+        }
+    }
+
+    slaughter () {
+        for () {
+
+        }
+    }
 
 }
+
+
+
+
+
 
 
 
