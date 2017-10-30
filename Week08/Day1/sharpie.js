@@ -21,17 +21,19 @@ class sharpie {
 
     use() {
         this.inkAmount -= this.width;
-        return this.inkAmount;
-        console.log(this.inkAmount)
     }
 
-    throwAway() {
-        if (this.inkAmount === 0) {
-            console.log(this.color + ' sharpie ran out of ink :c')
+    burnAway() {
+        console.log(this.inkAmount)
+        while (this.inkAmount > 0) {
+            this.use();
+            console.log(this.inkAmount);
         }
+        console.log(this.color + ' sharpie ran out of ink :c')
     }
+    
 }
 
 let peachpuff = new sharpie ('peachpuff', 20);
-peachpuff.use.bind(sharpie)
-console.log(peachpuff.inkAmount)
+peachpuff.burnAway();
+
