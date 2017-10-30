@@ -21,21 +21,25 @@ let car = {
         } else {
             this.petrolLevel += this.petrolCapacity;
         }
-        console.log(this.petrolLevel)
+        return this.petrolLevel
     }
 }
 
 // car.refill(30)
 
+let station = {
+    petrolStorage: 3000,
+    provide: function(car) {
+        car.refill(this.petrolStorage);
+        this.petrolStorage -= car.petrolLevel;
+    }
+}
 
 
+console.log(car.petrolLevel);
+console.log(station.petrolStorage);
 
+station.provide(car);
 
-
-// console.log(car.petrolLevel);
-// console.log(station.petrolStorage);
-
-// station.provide(car);
-
-// console.log(car.petrolLevel);
-// console.log(station.petrolStorage);
+console.log(car.petrolLevel);
+console.log(station.petrolStorage);
