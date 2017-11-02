@@ -24,24 +24,6 @@ function displayGif(gifData) {
         }
     }
 
-        // let newImg = document.createElement('img')
-        // let toDisplay = gifData.data[i].images.fixed_height_still.url
-        // console.log(toDisplay)
-        // let image = displayDiv.insertAdjacentElement[i]('beforeend', newImg)
-        // displayDiv.setAttribute('src', 'woooo')
-//     }
-// }
-
-// function addNewGif() {
-//     let newImg = document.createElement('img')
-//     let newContent = document.createTextNode('im a new gif container')
-//     newImg.appendChild(newContent)
-//     document.body.insertAdjacentElement('beforeend', newImg)
-// }
-
-
-
-
 window.onload = function () {
     getGif (displayGif);
 }
