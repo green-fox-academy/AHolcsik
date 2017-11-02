@@ -1,7 +1,7 @@
 'use strict'
 
 
-let displayDiv = document.querySelector ('img')
+let displayDiv = document.querySelector ('container')
 
 function getGif (callback) {
     let xhr = new XMLHttpRequest();
@@ -16,10 +16,30 @@ function getGif (callback) {
 }
 
 function displayGif(gifData) {
-    let toDisplay = gifData.data[9].images.original.url
-    console.log(toDisplay)
-    displayDiv.setAttribute('src', toDisplay)
-}
+        for (let i = 0; i < 16; i++) {
+            let newImg = document.createElement('img')
+            let toDisplay = gifData.data[i].images.fixed_height_still.url
+            newImg.setAttribute('src', toDisplay)
+            document.body.insertAdjacentElement('beforeend', newImg)
+        }
+    }
+
+        // let newImg = document.createElement('img')
+        // let toDisplay = gifData.data[i].images.fixed_height_still.url
+        // console.log(toDisplay)
+        // let image = displayDiv.insertAdjacentElement[i]('beforeend', newImg)
+        // displayDiv.setAttribute('src', 'woooo')
+//     }
+// }
+
+// function addNewGif() {
+//     let newImg = document.createElement('img')
+//     let newContent = document.createTextNode('im a new gif container')
+//     newImg.appendChild(newContent)
+//     document.body.insertAdjacentElement('beforeend', newImg)
+// }
+
+
 
 
 window.onload = function () {
