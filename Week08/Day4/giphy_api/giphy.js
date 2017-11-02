@@ -16,9 +16,9 @@ function getGif (callback) {
 }
 
 function displayGif(gifData) {
-    let toDisplay = gifData.data[0].images
+    let toDisplay = gifData.data[9].images.original.url
     console.log(toDisplay)
-    // displayDiv.setAttribute('src', toDisplay)
+    displayDiv.setAttribute('src', toDisplay)
 }
 
 
