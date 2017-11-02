@@ -1,8 +1,6 @@
 'use strict'
 
 
-let displayDiv = document.querySelector ('container')
-
 function getGif (callback) {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=qgbcFlGRFhawbL3ndpdr6PXddqaDv7DF&q=gravity falls&limit=16&offset=0&rating=PG-13&lang=en');
@@ -16,11 +14,16 @@ function getGif (callback) {
 }
 
 function displayGif(gifData) {
-        for (let i = 0; i < 16; i++) {
-            let newImg = document.createElement('img')
-            let toDisplay = gifData.data[i].images.fixed_height_still.url
-            newImg.setAttribute('src', toDisplay)
-            document.body.insertAdjacentElement('beforeend', newImg)
+    for (let i = 0; i < 16; i++) {
+        let containerDiv = document.getElementsByClassName('container')[0]
+        let newImg = document.createElement('img')
+        let toDisplay = gifData.data[i].images.fixed_width_still.url
+        let movingGif = gifData.data[i].images.fixed_width.url
+        newImg.setAttribute('src', toDisplay)
+        containerDiv.appendChild(newImg)
+        let allGifs = document.querySelectorAll('img')
+        allGifs[i].addEventListener('click', function() {
+            newImg.setAttribute('src', movingGif)})
         }
     }
 
