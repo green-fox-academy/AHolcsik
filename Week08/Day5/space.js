@@ -18,7 +18,6 @@ function displayData(data) {
     newTitle.textContent = data.title
     newUser.textContent = data.user
     newTitle.setAttribute('href', data.url)
-    console.log(newTitle)
     contentDiv.appendChild(newUl)
     newUl.appendChild(newTitle)
     newUl.appendChild(newUser)

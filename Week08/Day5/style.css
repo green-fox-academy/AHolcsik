@@ -17,6 +17,7 @@
 .content {
     background-color: peachpuff;
     grid-area: content;
+    padding: 20px;
 
 }
 
@@ -24,4 +25,16 @@
     background-color: yellowgreen;
     grid-area: side;
 
+}
+
+ul, li {
+    list-style: none;
+}
+
+ul {
+    width: 400px;
+    background-color: azure;
+    border: 2px black solid;
+    padding: 10px;
+    margin: 5px auto 5px auto;
 }
