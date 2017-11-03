@@ -13,19 +13,15 @@ function getPosts (callback) {
 
 function displayData(data) {
     let newUl = document.createElement('ul')
-    let newTitle = document.createElement('li')
+    let newTitle = document.createElement('a')
     let newUser = document.createElement('li')
-    // let newDate = document.createElement('li')
     newTitle.textContent = data.title
     newUser.textContent = data.user
-    // newDate.textContent = articleData.pub_date
+    newTitle.setAttribute('href', data.url)
     console.log(newTitle)
-    console.log(newUser)
     contentDiv.appendChild(newUl)
     newUl.appendChild(newTitle)
     newUl.appendChild(newUser)
-    // newUl.appendChild(newDate)
-    console.log(data)
 }
 
 getPosts(displayData)
