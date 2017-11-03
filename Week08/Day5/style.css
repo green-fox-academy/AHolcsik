@@ -1,3 +1,10 @@
+body {
+    background: #ddd;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
 .container {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 200px 400px auto;
@@ -12,18 +19,26 @@
     background-image: url(background.jpg);
     background-position-y: -400px;
     grid-area: cover;
+    color: white;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 55px;
+    text-align: center;
+    padding-top: 60px;
 }
 
 .content {
-    background-color: peachpuff;
+    background-color: #fff;
     grid-area: content;
     padding: 20px;
+    width: 90%;
+    margin: 15px auto 15px auto;
 
 }
 
 .side {
-    background-color: yellowgreen;
     grid-area: side;
+    margin: 15px;
 
 }
 
@@ -32,9 +47,21 @@ ul, li {
 }
 
 ul {
-    width: 400px;
     background-color: azure;
     border: 2px black solid;
     padding: 10px;
     margin: 5px auto 5px auto;
+}
+
+button {
+    width: 100%;
+    background-color:skyblue;
+    color: white;
+}
+
+.info {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 5px;
+
 }
