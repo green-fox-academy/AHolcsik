@@ -1,0 +1,27 @@
+.container {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 200px 400px auto;
+    display: grid;
+    grid-template-areas: 'cover cover'
+                         'content side'
+}
+
+
+.cover {
+    /* height: 200px; */
+    background-image: url(background.jpg);
+    background-position-y: -400px;
+    grid-area: cover;
+}
+
+.content {
+    background-color: peachpuff;
+    grid-area: content;
+
+}
+
+.side {
+    background-color: yellowgreen;
+    grid-area: side;
+
+}
