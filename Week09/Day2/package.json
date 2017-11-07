@@ -1,0 +1,14 @@
+{
+  "name": "dejo",
+  "version": "1.0.0",
+  "description": "ez nagyon jo nekem most",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "noodle",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.10.0"
+  }
+}
