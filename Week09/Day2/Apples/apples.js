@@ -18,13 +18,4 @@ let getApple = function() {
     return 'apple'
 }
 
-
-let test = require('tape')
-
-test('return string', function (t) {
-  let actual = 'apple';
-  let expected = 'apple';
-
-  t.equal(actual, expected);
-  t.end();
-});
+module.exports = getApple();
