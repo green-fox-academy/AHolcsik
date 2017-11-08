@@ -49,6 +49,16 @@ app.get('/greeter', function(req,res){
     }
 })
 
+app.get('/appenda/:whatever', function(req,res){
+    if (req.params.whatever){
+        res.json (
+            {
+                "appended": req.params.whatever + "a"
+              }
+        )
+    }
+})
+
 express.json.type = "application/json"
 app.use('/assets', express.static('assets'))
 
