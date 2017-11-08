@@ -33,10 +33,17 @@ app.get('/greeter', function(req,res){
               }
         )
     }
-    else {
+    else if (!req.query.name) {
         res.json (
             {
                 "error": "Please provide a name!"
+            }
+        )
+    }
+    else if (!req.query.title) {
+        res.json (
+            {
+                "error": "Please provide a title!"
             }
         )
     }
