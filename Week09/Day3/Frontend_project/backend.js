@@ -25,6 +25,23 @@ app.get('/doubling', function(req,res){
     }
 })
 
+app.get('/greeter', function(req,res){
+    if (req.query.name && req.query.title){
+        res.json (
+            {
+                "welcome_message": "Oh, hi there " + req.query.name + ", my dear " + req.query.title + "!"
+              }
+        )
+    }
+    else {
+        res.json (
+            {
+                "error": "Please provide a name!"
+            }
+        )
+    }
+})
+
 express.json.type = "application/json"
 app.use('/assets', express.static('assets'))
 
