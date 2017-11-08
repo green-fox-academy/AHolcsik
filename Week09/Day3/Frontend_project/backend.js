@@ -1,6 +1,8 @@
 var express = require('express');
+var bodyParser = require('body-parser')
 
 var app = express();
+app.use(bodyParser.json())
 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
@@ -58,6 +60,38 @@ app.get('/appenda/:whatever', function(req,res){
         )
     }
 })
+
+app.post('/dountil/:wat', function(req,res){
+    let operator = req.params.wat
+    let result = 0
+    if (operator == 'sum') {
+        result = (req.body.until) * ( (req.body.until) + 1 ) / 2
+    }
+    else if (operator == 'factor') {
+        result = factor (req.body.until)
+    }
+    else if (!req.body.until){
+        res.json (
+            {
+                "error": "Please provide a number!"
+              }
+        )
+    }
+    res.json (
+        {
+            'result' : result
+        }
+    )
+})
+
+let factor = function (n){
+    j = 1;
+    for(i=1;i<=n;i++){
+      j = j*i;
+    }
+    return j;
+  }
+
 
 express.json.type = "application/json"
 app.use('/assets', express.static('assets'))
