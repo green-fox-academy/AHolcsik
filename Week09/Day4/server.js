@@ -1,6 +1,10 @@
 'use strict'
 
-var mysql = require("mysql");
+const mysql = require("mysql");
+const express = require('express');
+const app = express();
+
+app.use(express.json())
 
 var conn = mysql.createConnection({
   host: "localhost",
@@ -17,5 +21,7 @@ conn.connect(function(err){
   console.log("Connection established");
 });
 
-
+app.listen(3000, function() {
+    console.log('server is up on port 3000, good to go!')
+})
 
