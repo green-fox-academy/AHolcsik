@@ -13,7 +13,7 @@ var conn = mysql.createConnection({
   database: 'bookstore'
 });
 
-conn.connect(function(err){
+conn.connect(function(err) {
   if(err){
     console.log('Error connecting to database oooh');
     return;
@@ -21,7 +21,22 @@ conn.connect(function(err){
   console.log('Connection established woooo');
 });
 
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + '/index.html');    
+});
+
+app.get('/bookstore', function(req, res) {
+    conn.query('SELECT book_name FROM book_mast;', function(err, result) {
+        if(err) {
+            console.log(err.toString());
+          }
+          res.json(result);
+    })
+})
+
+
+
 app.listen(8080, function() {
-    console.log('server is up on port 3000, good to go!')
+    console.log('server is up on port 8080, good to go!')
 })
 
