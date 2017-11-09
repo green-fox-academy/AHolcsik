@@ -21,7 +21,7 @@ conn.connect(function(err){
   console.log('Connection established woooo');
 });
 
-app.listen(3000, function() {
+app.listen(8080, function() {
     console.log('server is up on port 3000, good to go!')
 })
 
