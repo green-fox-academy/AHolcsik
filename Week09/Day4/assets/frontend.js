@@ -1,13 +1,13 @@
 'use strict';
 
 const url = 'http://localhost:8080';
-const displayArticle = document.querySelector('article')
+const displayArticle = document.getElementsByTagName('article')[0]
 
 
-const ajax = function(method, callback) {
+const ajax = function(method, endpoint, callback) {
     const xhr = new XMLHttpRequest();
-    console.log('ajax try')
-    xhr.open (method, url)
+    console.log(url+endpoint)
+    xhr.open (method, url + endpoint)
     xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
@@ -16,21 +16,22 @@ const ajax = function(method, callback) {
         }
     }
     xhr.send()
+
 }
 
 var getBookNames = function(callback) {
-    console.log('this worked')
-    ajax('GET', callback)
+    console.log('is get')
+    ajax('GET', 'bookstore', callback)
 }
 
 var displayBookNames = function(data) {
     data.forEach(function(book){
-        console.log('this tried it too')
+        console.log(book.name)
         const Books = document.createElement('li')
         displayedBook.innerText = book.name
         displayArticle.appendChild(displayedBook)
     })
 }
-
+console.log('maybe this')
 getBookNames(displayBookNames);
 
