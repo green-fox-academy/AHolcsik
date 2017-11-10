@@ -1,7 +1,6 @@
 'use strict'
 
 let myBut = document.getElementsByTagName('button')[0]
-let allGifs = document.querySelectorAll('img')
 let url = 'https://api.giphy.com/v1/gifs/search?api_key=qgbcFlGRFhawbL3ndpdr6PXddqaDv7DF&'
 let mySecondBut = document.getElementsByTagName('button')[1]
 myBut.addEventListener("click", click)
@@ -23,7 +22,7 @@ function getGif (searchUrl, callback) {
 }
 
 function displayGif(gifData) {
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 12; i++) {
         let containerDiv = document.getElementsByClassName('container')[0]
         let newImg = document.createElement('img')
         let toDisplay = gifData.data[i].images.fixed_width_still.url
@@ -49,7 +48,7 @@ function displayGif(gifData) {
 
 function click() {
     let searchInput = document.getElementById('mySearch').value;
-    let searchUrl = 'q=' + searchInput + '&limit=16&offset=0&rating=PG-13&lang=en'
+    let searchUrl = 'q=' + searchInput + '&limit=16&offset=25&rating=PG-13&lang=en'
     if (searchInput !== "") {
         getGif (searchUrl, displayGif);
     }
