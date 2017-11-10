@@ -2,14 +2,20 @@
 
 let myBut = document.getElementsByTagName('button')[0]
 let allGifs = document.querySelectorAll('img')
+let url = 'https://api.giphy.com/v1/gifs/search?api_key=qgbcFlGRFhawbL3ndpdr6PXddqaDv7DF&'
+let mySecondBut = document.getElementsByTagName('button')[1]
+myBut.addEventListener("click", click)
 
-
-function getGif (callback) {
+function getGif (searchUrl, callback) {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=qgbcFlGRFhawbL3ndpdr6PXddqaDv7DF&q=gravity falls, bill cipher&limit=16&offset=0&rating=PG-13&lang=en');
+    console.log(searchUrl)
+    xhr.open('GET', url + searchUrl);
+    console.log(url + searchUrl)
+    xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             let Gifs = JSON.parse(xhr.responseText)
+            console.log(Gifs)
             callback (Gifs)
         }
     }
@@ -30,17 +36,24 @@ function displayGif(gifData) {
         
         let madness = function (){
             allGifs.forEach(function(gif) {
-                console.log('i got clicked!')
                 newImg.setAttribute('src', movingGif)
             });
         }
 
-        myBut.addEventListener ('click', madness)
+        mySecondBut.addEventListener ('click', madness)
         
         }
     }
 
 
-window.onload = function () {
-    getGif (displayGif);
+function click() {
+    console.log("click event")
+    let searchInput = document.getElementById('mySearch').value;
+    let searchUrl = 'q=' + searchInput + '&limit=16&offset=0&rating=PG-13&lang=en'
+    if (searchInput !== "") {
+        getGif (searchUrl, displayGif);
+    }
+    else {
+
+    }
 }
