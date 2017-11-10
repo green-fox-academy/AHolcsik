@@ -5,6 +5,7 @@ const express = require('express');
 const app = express();
 
 app.use(express.json())
+app.use('/assets', express.static('./assets'));
 
 var conn = mysql.createConnection({
   host: 'localhost',
@@ -22,6 +23,7 @@ conn.connect(function(err) {
 });
 
 app.get('/', function(req, res) {
+    console.log('something')
     res.sendFile(__dirname + '/index.html');    
 });
 
