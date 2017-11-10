@@ -30,6 +30,7 @@ function displayGif(gifData) {
         let movingGif = gifData.data[i].images.fixed_width.url
         newImg.setAttribute('src', toDisplay)
         containerDiv.appendChild(newImg)
+
         let allGifs = document.querySelectorAll('img')
         allGifs[i].addEventListener('click', function() {
             newImg.setAttribute('src', movingGif)})
@@ -47,13 +48,14 @@ function displayGif(gifData) {
 
 
 function click() {
-    console.log("click event")
     let searchInput = document.getElementById('mySearch').value;
     let searchUrl = 'q=' + searchInput + '&limit=16&offset=0&rating=PG-13&lang=en'
     if (searchInput !== "") {
         getGif (searchUrl, displayGif);
     }
     else {
-
+        let warning = document.createElement('h5')
+        warning.innerHTML = 'nothing to search'
+        document.body.appendChild(warning)
     }
 }
