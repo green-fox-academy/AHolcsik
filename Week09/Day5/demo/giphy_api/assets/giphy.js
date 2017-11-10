@@ -1,5 +1,9 @@
 'use strict'
 
+let myBut = document.getElementsByTagName('button')[0]
+let allGifs = document.querySelectorAll('img')
+
+
 function getGif (callback) {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=qgbcFlGRFhawbL3ndpdr6PXddqaDv7DF&q=gravity falls, bill cipher&limit=16&offset=0&rating=PG-13&lang=en');
@@ -23,8 +27,19 @@ function displayGif(gifData) {
         let allGifs = document.querySelectorAll('img')
         allGifs[i].addEventListener('click', function() {
             newImg.setAttribute('src', movingGif)})
+        
+        let madness = function (){
+            allGifs.forEach(function(gif) {
+                console.log('i got clicked!')
+                newImg.setAttribute('src', movingGif)
+            });
+        }
+
+        myBut.addEventListener ('click', madness)
+        
         }
     }
+
 
 window.onload = function () {
     getGif (displayGif);
