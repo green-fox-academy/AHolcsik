@@ -1,0 +1,68 @@
+.container {
+    background-color: #333;
+    margin: auto;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-areas: 'logo current current current'
+                         'playlists playlists tracks tracks'
+                         'control control control control'
+}
+
+.logo {
+    background-color: peachpuff;
+    grid-area: logo;
+}
+
+.playlists {
+    background-color: yellowgreen;
+    grid-area: playlists;
+}
+
+.current {
+    background-color: azure;
+    grid-area: current;
+}
+
+.tracks {
+    background-color: bisque;
+    grid-area: tracks;
+}
+
+.control {
+    background-color: maroon;
+    grid-area: control;
+}
+
+.playback {
+    /* background-color: thistle; */
+    grid-area: playback;
+}
+
+.prev {
+    grid-area: prev;
+}
+
+.pause {
+    grid-area: pause;
+}
+
+.next {
+    grid-area: next;
+}
+
+.seekbar {
+    grid-area: seekbar;
+}
+
+.shuffle {
+    grid-area: shuffle;
+}
+
+.volume {
+    grid-area: volume;
+}
+
+
+
