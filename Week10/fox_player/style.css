@@ -42,14 +42,19 @@
 
 .prev {
     grid-area: prev;
+    background: url(img/rewind.svg) 0 0 transparent;
 }
 
 .pause {
     grid-area: pause;
+    background: url(img/pause.svg) 0 0 transparent;
+    
 }
 
 .next {
     grid-area: next;
+    background: url(img/forward.svg) 0 0 transparent;
+    
 }
 
 .seekbar {
@@ -58,11 +63,19 @@
 
 .shuffle {
     grid-area: shuffle;
+    background: url(img/shuffle.svg) 0 0 transparent;
+    
 }
 
 .volume {
     grid-area: volume;
+    background: url(img/volume.svg) 0 0 transparent;
+    
 }
 
-
+button {
+    width: 5px;
+    height: 5px;
+    background-color: yellow;
+}
 
