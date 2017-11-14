@@ -3,7 +3,7 @@
 const playlistContainer = document.querySelector('.playlists')
 const trackContainer = document.querySelector('.tracks')
 const listOplaylists = ['All tracks', 'Favourites']
-const listOtracks = ['MSI - Bitches', 'Turmion Katilot - Pyrun nyrkki']
+const listOtracks = ['MSI - Bitches', 'Turmion Katilot - Pyrun nyrkki', 'Bloodhound Gang - Um Tiss Um Tiss Um Tiss', 'Britney Spears - Oops I did it again']
 
 let addPlaylist = function() {
     listOplaylists.forEach(function(playlist){
