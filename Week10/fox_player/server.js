@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 
 app.use(express.json())
-app.use('/', express.static('./'))
+app.use('/', express.static('./assets'))
 
 
 app.get('/', function(req, res) {

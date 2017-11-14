@@ -54,17 +54,17 @@ audio {
 
 
 .play{
-    background: url('img/play.svg');
+    background: url(img/play.svg);
 }
 
 .pause{
-    background: url('img/pause.svg');
+    background: url(img/pause.svg);
 }
 
 
 .next {
     grid-area: next;
-    background: url('img/forward.svg') center no-repeat;
+    background: url(img/forward.svg) center no-repeat;
     
 }
 
