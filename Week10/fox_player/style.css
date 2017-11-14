@@ -31,7 +31,7 @@
 }
 
 .control {
-    background-color: maroon;
+    background-color: #eee;
     grid-area: control;
 }
 
@@ -42,18 +42,18 @@
 
 .prev {
     grid-area: prev;
-    background: url(img/rewind.svg) 0 0 transparent;
+    background: url(img/rewind.svg) center no-repeat;
 }
 
 .pause {
     grid-area: pause;
-    background: url(img/pause.svg) 0 0 transparent;
+    background: url(img/pause.svg) center no-repeat;
     
 }
 
 .next {
     grid-area: next;
-    background: url(img/forward.svg) 0 0 transparent;
+    background: url(img/forward.svg) center no-repeat;
     
 }
 
@@ -63,19 +63,19 @@
 
 .shuffle {
     grid-area: shuffle;
-    background: url(img/shuffle.svg) 0 0 transparent;
+    background: url(img/shuffle.svg) center no-repeat;
     
 }
 
 .volume {
     grid-area: volume;
-    background: url(img/volume.svg) 0 0 transparent;
+    background: url(img/volume.svg) center no-repeat;
     
 }
 
 button {
-    width: 5px;
-    height: 5px;
-    background-color: yellow;
+    width: 25px;
+    height: 25px;
+    border-style: none;
 }
 
