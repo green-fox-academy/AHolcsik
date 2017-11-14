@@ -43,6 +43,10 @@
     align-items: center;
 }
 
+audio {
+    margin-top: 10px;
+}
+
 .prev {
     grid-area: prev;
     background: url(img/rewind.svg) center no-repeat;
@@ -93,4 +97,8 @@ button{
     background-position: center;
     outline:none;
 
+}
+
+audio::-webkit-media-controls, audio::-webkit-media-controls-panel {
+	background: transparent;
 }
