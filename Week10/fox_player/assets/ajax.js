@@ -2,9 +2,9 @@
 
 const url = 'tracks.json'
 
-function ajax(callback) {
+function ajax(method, url, callback) {
     let xhr = new XMLHttpRequest()
-    xhr.open('GET', url)
+    xhr.open(method, url)
     xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
@@ -15,4 +15,3 @@ function ajax(callback) {
     xhr.send()
 }
 
-ajax()
