@@ -1,0 +1,8 @@
+[
+	{ "id": 5, "title": "All tracks", "system": 1},    
+    { "id": 1, "title": "Favorites", "system": 1},
+	{ "id": 2, "title": "Music for programming", "system": 0},
+    { "id": 5, "title": "Fox house", "system": 0},
+	{ "id": 5, "title": "Worst of the 90s", "system": 0},
+	{ "id": 3, "title": "Driving", "system": 0}
+]
