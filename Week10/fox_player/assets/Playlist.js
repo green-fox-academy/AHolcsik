@@ -25,17 +25,21 @@ let addPlaylist = function(list) {
 
 function setEventlisteners() {
     const deleteButtons = document.getElementsByClassName('delete')
-    const playlistElements = document.getElementsByClassName('playlist')
+    const playlistElements = document.querySelectorAll('li')
     for (let i = 0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', () => {
             console.log('a click!')
         })
     }
-    for (let i = 0; i < playlistElements.length; i++) {
-        playlistElements[i].addEventListener('click', () => {
-            console.log('woah!')
+    
+    console.log(playlistElements)
+    
+    playlistElements.forEach(function(e){
+        e.addEventListener('click', () => {
+            playlistElements.forEach( e => e.classList.remove('active'))
+                e.classList.add('active')
         })
-    }
+    })
 }
 
 

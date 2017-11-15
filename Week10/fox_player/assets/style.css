@@ -123,3 +123,7 @@ audio::-webkit-media-controls, audio::-webkit-media-controls-panel {
 /* .playlists li {
     
 } */
+
+.active {
+    background-color: peachpuff;
+}
