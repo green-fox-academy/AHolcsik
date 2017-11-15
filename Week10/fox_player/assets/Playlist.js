@@ -31,9 +31,7 @@ function setEventlisteners() {
             console.log('a click!')
         })
     }
-    
-    console.log(playlistElements)
-    
+        
     playlistElements.forEach(function(e){
         e.addEventListener('click', () => {
             playlistElements.forEach( e => e.classList.remove('active'))
@@ -42,6 +40,10 @@ function setEventlisteners() {
     })
 }
 
+const addButton = document.querySelector('.add')
 
+addButton.addEventListener('click', function(){
+    console.log('yiha!')
+})
 
 
