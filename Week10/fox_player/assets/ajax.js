@@ -1,6 +1,5 @@
 'use strict'
 
-const url = 'tracks.json'
 
 function ajax(method, url, callback) {
     let xhr = new XMLHttpRequest()
