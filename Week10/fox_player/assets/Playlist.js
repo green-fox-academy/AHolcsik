@@ -49,9 +49,12 @@ addButton.addEventListener('click', function(){
                       <button class="okay">OK</button> <button class="cancel">cancel</button>`
     inputBox.innerHTML = inputField
     document.querySelector('body').appendChild(inputBox)
-})
 
-let postPlaylist = function () {
-    ajax('POST', data, 'playlists.json', callback)
-}
+    let userInput = document.querySelector('input')
+    
+    document.querySelector('.okay').addEventListener('click', function(){
+        let data = {'title': userInput.value, 'system': 0}
+        ajax('POST', data, 'playlists.json', addPlaylist)
+    })
+})
 
