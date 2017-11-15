@@ -3,6 +3,7 @@
 const playlistContainer = document.querySelector('.playlists')
 const listOplaylists = ['All tracks', 'Favourites', 'Worst of the 90s']
 
+
 let addPlaylist = function() {
     listOplaylists.forEach(function(playlist){
         let contentPlaylist = `${playlist}`
@@ -19,5 +20,12 @@ let addPlaylist = function() {
     })
 }()
 
+const deleteButtons = document.getElementsByClassName('delete')
+
+for (let i = 0; i < deleteButtons.length; i++) {
+    deleteButtons[i].addEventListener('click', () => {
+        console.log('a click!')
+    })
+}
 
 
