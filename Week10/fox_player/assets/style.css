@@ -13,6 +13,18 @@
 .logo {
     background-color: peachpuff;
     grid-area: logo;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: bottom; */
+}
+
+h5 {
+    align-self: flex-end;
+}
+
+.add {
+    background: url(img/add.png) no-repeat center;
+    background-size: 100%;
 }
 
 .playlists {
@@ -102,3 +114,7 @@ button{
 audio::-webkit-media-controls, audio::-webkit-media-controls-panel {
 	background: transparent;
 }
+
+/* .playlists li {
+    
+} */
