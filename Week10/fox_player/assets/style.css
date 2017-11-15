@@ -127,3 +127,9 @@ audio::-webkit-media-controls, audio::-webkit-media-controls-panel {
 .active {
     background-color: peachpuff;
 }
+
+article {
+    width: 200px;
+    height: 50px;
+    background-color: skyblue;
+}

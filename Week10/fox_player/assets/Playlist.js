@@ -31,7 +31,7 @@ function setEventlisteners() {
             console.log('a click!')
         })
     }
-        
+
     playlistElements.forEach(function(e){
         e.addEventListener('click', () => {
             playlistElements.forEach( e => e.classList.remove('active'))
@@ -42,8 +42,14 @@ function setEventlisteners() {
 
 const addButton = document.querySelector('.add')
 
+
 addButton.addEventListener('click', function(){
     console.log('yiha!')
+    let inputBox = document.createElement('article')
+    let inputField = `<input type="text" placeholder="enter playlist">
+                      <button class="okay">OK</button> <button class="cancel">cancel</button>`
+    inputBox.innerHTML = inputField
+    document.querySelector('body').appendChild(inputBox)
 })
 
 
