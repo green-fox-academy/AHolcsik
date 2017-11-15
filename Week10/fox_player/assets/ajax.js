@@ -1,8 +1,9 @@
 'use strict'
 
 
-function ajax(method, url, callback) {
+function ajax(method, data, url, callback) {
     let xhr = new XMLHttpRequest()
+    data = data ? data : null;
     xhr.open(method, url)
     xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.onreadystatechange = function() {

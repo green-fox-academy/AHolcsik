@@ -4,7 +4,7 @@ const trackContainer = document.querySelector('.tracks')
 // const listOtracks = ['MSI - Bitches', 'Turmion Katilot - Pyrun nyrkki', 'Bloodhound Gang - Um Tiss Um Tiss Um Tiss', 'Britney Spears - Oops I did it again']
 
 let listTracks = function() {
-    ajax('GET', 'tracks.json', addTracks)
+    ajax('GET', '', 'tracks.json', addTracks)
 }
 
 let addTracks = function(listOtracks) {
