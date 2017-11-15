@@ -27,6 +27,11 @@ h5 {
     background-size: 100%;
 }
 
+.delete {
+    background: url(img/delete.png) no-repeat center;
+    background-size: 70%;
+}
+
 .playlists {
     background-color: yellowgreen;
     grid-area: playlists;

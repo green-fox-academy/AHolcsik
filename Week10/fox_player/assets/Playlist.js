@@ -9,7 +9,7 @@ let addPlaylist = function() {
         let Playlist = document.createElement('li')
         // dinamic variable will decide this part
         if (playlist !== 'All tracks', 'Favourites') {
-            let button = `<button></button>`
+            let button = `<button class="delete"></button>`
             Playlist.innerHTML = contentPlaylist + button
         }
         else {
@@ -18,3 +18,6 @@ let addPlaylist = function() {
         playlistContainer.appendChild(Playlist)
     })
 }()
+
+
+
