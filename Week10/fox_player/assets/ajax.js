@@ -1,23 +1,21 @@
 'use strict'
 
-// const playlistContainer = document.querySelector('.playlists')
-// const trackContainer = document.querySelector('.tracks')
 const url = 'tracks.json'
 
-function getTracks() {
+function ajax(callback) {
     let xhr = new XMLHttpRequest()
     xhr.open('GET', url)
     xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
-            let Tracks = JSON.parse(xhr.responseText)
-            console.log(Tracks)
+            let recievedData = JSON.parse(xhr.responseText)
+            callback(recievedData)
         }
     }
     xhr.send()
 }
 
-getTracks()
+ajax()
 
 
 // let myBut = document.getElementsByTagName('button')[0]
