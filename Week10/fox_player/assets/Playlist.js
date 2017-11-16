@@ -55,7 +55,7 @@ addButton.addEventListener('click', function(){
     let userInput = document.querySelector('input')
     
     document.querySelector('.okay').addEventListener('click', function(){
-        let data = {'title': userInput.value, 'system': 0}
+        let data = {'playlist': userInput.value}
         ajax('POST', data, '/playlists', addPlaylist)
     })
 })
