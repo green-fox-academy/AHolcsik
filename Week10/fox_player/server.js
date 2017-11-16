@@ -63,12 +63,16 @@ app.post('/playlists', function(req, res) {
         if(err) {
             console.log(err.toString());
         }
+          res.json({"Result":"okay"});
     })
-    connection.query('SELECT * FROM playlists;', function(err, result) {
+})
+
+app.delete('/playlists', function(req, res) {
+    connection.query('DELETE FROM playlists WHERE id=' + req.body.id + ';', function(err, result) {
         if(err) {
             console.log(err.toString());
-          }
-          res.json(result);
+        }
+        res.json({"Result":"okay"});
     })
 })
 

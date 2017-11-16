@@ -9,12 +9,13 @@ let listPlaylist = function(){
 }
 
 let addPlaylist = function(list) {
+    console.log(list)
     list.forEach(function(playlist){
         let contentPlaylist = `${playlist.playlist}`
         let Playlist = document.createElement('li')
         Playlist.setAttribute('class', 'playlist')
         if (playlist.system !== 1) {
-            let button = `<button class="delete"></button>`
+            let button = `<button id="${playlist.id}" class="delete"></button>`
             Playlist.innerHTML = contentPlaylist + button
         }
         else {
@@ -29,8 +30,11 @@ function setEventlisteners() {
     const deleteButtons = document.getElementsByClassName('delete')
     const playlistElements = document.querySelectorAll('li')
     for (let i = 0; i < deleteButtons.length; i++) {
-        deleteButtons[i].addEventListener('click', () => {
-            console.log('a click!')
+        deleteButtons[i].addEventListener('click', function(){
+            let identifier = {'id': deleteButtons[i].getAttribute('id')}
+            console.log(identifier, 'i been selected')
+            ajax('DELETE', identifier, '/playlists', addPlaylist)
+            listPlaylist()
         })
     }
 
@@ -57,6 +61,7 @@ addButton.addEventListener('click', function(){
     document.querySelector('.okay').addEventListener('click', function(){
         let data = {'playlist': userInput.value}
         ajax('POST', data, '/playlists', addPlaylist)
+        listPlaylist
     })
 })
 
