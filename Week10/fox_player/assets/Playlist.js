@@ -26,7 +26,8 @@ let addPlaylist = function(list) {
 
 function setEventlisteners() {
     const deleteButtons = document.getElementsByClassName('delete')
-    const playlistElements = document.querySelectorAll('li')
+    const playlistElements = document.querySelectorAll('.playlist')
+
     for (let i = 0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', function(){
             let id = {'id': deleteButtons[i].getAttribute('id')}
@@ -61,6 +62,5 @@ addButton.addEventListener('click', function(){
 })
 
 function deletePlaylist(id){
-    playlistContainer.innerHTML = ''
     ajax('DELETE', id, '/playlists', listPlaylist)
 }

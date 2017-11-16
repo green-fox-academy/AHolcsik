@@ -3,7 +3,7 @@
 
 function ajax(method, data, url, callback) {
     let xhr = new XMLHttpRequest()
-    console.log(data)
+    // console.log(data)
     data = data ? data : null;
     xhr.open(method, url)
     xhr.setRequestHeader('Content-Type', 'application/json')
@@ -16,7 +16,7 @@ function ajax(method, data, url, callback) {
     let sendData = null
     if (data){
         sendData = JSON.stringify(data)
-        console.log(sendData)
+        // console.log(sendData)
     }
     xhr.send(sendData)
 }

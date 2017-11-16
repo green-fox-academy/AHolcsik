@@ -132,7 +132,7 @@ audio::-webkit-media-controls, audio::-webkit-media-controls-panel {
 } */
 
 .active {
-    background-color: peachpuff;
+    background-color: rgb(120, 241, 160);
 }
 
 article {
