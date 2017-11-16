@@ -26,7 +26,6 @@ let displayCurrent = function (){
 
 function setEventlistenersTracks() {
     const trackElements = document.querySelectorAll('.track')
-    console.log(trackElements)
 
     trackElements.forEach(function(e){
         e.addEventListener('click', () => {

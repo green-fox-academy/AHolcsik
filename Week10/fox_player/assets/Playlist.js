@@ -27,7 +27,6 @@ let addPlaylist = function(list) {
 function setEventlistenersPlaylists() {
     const deleteButtons = document.getElementsByClassName('delete')
     const playlistElements = document.querySelectorAll('.playlist')
-    console.log(playlistElements)
 
     for (let i = 0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', function(){
