@@ -19,31 +19,6 @@ var connection = mysql.createConnection({
     console.log('Connection established woooo');
   });
 
-// let tracklist = [
-//     {
-//         "author": "MSI",
-//         "track_name": "Bitches",
-//         "length": "3:00"
-//     },
-    
-//     {
-//         "author": "Turmion Katilot",
-//         "track_name": "Pyrun nyrkki",
-//         "length": "3:00"
-//     },
-    
-//     {
-//         "author": "Bloodhound Gang",
-//         "track_name": "Um Tiss Um Tiss Um Tiss",
-//         "length": "3:00"
-//     },
-    
-//     {
-//         "author": "Britney Spears",
-//         "track_name": "Oops I did it again",
-//         "length": "3:00"
-//     }
-//     ]
 
 app.use(express.json())
 app.use('/', express.static('./assets'))
@@ -76,10 +51,15 @@ app.delete('/playlists', function(req, res) {
     })
 })
 
-
-app.get('/tracks', function(req,res){
-    res.json(tracklist)
+app.get('/tracks', function(req, res) {
+    connection.query('SELECT * FROM tracks;', function(err, result) {
+        if(err) {
+            console.log(err.toString());
+          }
+          res.json(result);
+    })
 })
+
 
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/fox_index.html');    

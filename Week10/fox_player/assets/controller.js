@@ -1,4 +1,4 @@
 'use strict'
 
 listPlaylist()
-// listTracks()
+listTracks()

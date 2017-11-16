@@ -1,7 +1,7 @@
 'use strict'
 
 const trackContainer = document.querySelector('.tracks')
-// const listOtracks = ['MSI - Bitches', 'Turmion Katilot - Pyrun nyrkki', 'Bloodhound Gang - Um Tiss Um Tiss Um Tiss', 'Britney Spears - Oops I did it again']
+const currentContainer = document.querySelector('.current')
 
 let listTracks = function() {
     ajax('GET', '', '/tracks', addTracks)
@@ -10,7 +10,13 @@ let listTracks = function() {
 let addTracks = function(listOtracks) {
     listOtracks.forEach(function(track){
         let element = document.createElement('li')
-        element.innerHTML = track.author + ' - ' + track.track_name
+        element.innerHTML = track.path
         trackContainer.appendChild(element)
     })
 }
+
+let displayCurrent = function (){
+    let current = document.querySelector('audio').getAttribute('src')
+    let currentElement = `<article class="playing">${current} is playing</article>`
+    currentContainer.innerHTML = currentElement
+}()

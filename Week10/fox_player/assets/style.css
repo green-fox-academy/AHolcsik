@@ -40,6 +40,13 @@ h5 {
 .current {
     background-color: azure;
     grid-area: current;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playing {
+    width: 300px;
 }
 
 .tracks {
