@@ -19,15 +19,6 @@ var connection = mysql.createConnection({
     console.log('Connection established woooo');
   });
 
-let playlist = [
-    { "id": 6, "title": "All tracks", "system": 1},    
-    { "id": 1, "title": "Favorites", "system": 1},
-    { "id": 2, "title": "Music for programming", "system": 0},
-    { "id": 4, "title": "Fox house", "system": 0},
-    { "id": 5, "title": "Worst of the 90s", "system": 0},
-    { "id": 3, "title": "Driving", "system": 0}
-]
-
 let tracklist = [
     {
         "author": "MSI",
@@ -57,19 +48,19 @@ let tracklist = [
 app.use(express.json())
 app.use('/', express.static('./assets'))
 
-// app.get('/bookstore', function(req, res) {
-//     conn.query('SELECT book_name FROM book_mast;', function(err, result) {
-//         if(err) {
-//             console.log(err.toString());
-//           }
-//           res.json(result);
-//     })
-// })
-
-
-app.get('/playlists', function(req,res){
-    res.json(playlist)
+app.get('/playlists', function(req, res) {
+    connection.query('SELECT * FROM playlists;', function(err, result) {
+        if(err) {
+            console.log(err.toString());
+          }
+          res.json(result);
+    })
 })
+
+
+// app.get('/playlists', function(req,res){
+//     res.json(playlist)
+// })
 
 app.get('/tracks', function(req,res){
     res.json(tracklist)

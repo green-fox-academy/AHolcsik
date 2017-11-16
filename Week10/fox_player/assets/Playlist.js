@@ -1,4 +1,6 @@
-'use strickt'
+//import { log } from "util";
+
+'use strict'
 
 const playlistContainer = document.querySelector('.playlists')
 
@@ -8,7 +10,7 @@ let listPlaylist = function(){
 
 let addPlaylist = function(list) {
     list.forEach(function(playlist){
-        let contentPlaylist = `${playlist.title}`
+        let contentPlaylist = `${playlist.playlist}`
         let Playlist = document.createElement('li')
         Playlist.setAttribute('class', 'playlist')
         if (playlist.system !== 1) {
