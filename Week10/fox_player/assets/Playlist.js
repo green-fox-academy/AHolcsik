@@ -1,5 +1,3 @@
-//import { log } from "util";
-
 'use strict'
 
 const playlistContainer = document.querySelector('.playlists')
@@ -47,7 +45,6 @@ function setEventlisteners() {
 const addButton = document.querySelector('.add')
 
 addButton.addEventListener('click', function(){
-    console.log('yiha!')
     let inputBox = document.createElement('article')
     let inputField = `<input type="text" placeholder="enter playlist">
                       <button class="okay">OK</button> <button class="cancel">cancel</button>`
@@ -58,8 +55,8 @@ addButton.addEventListener('click', function(){
     
     document.querySelector('.okay').addEventListener('click', function(){
         let data = {'playlist': userInput.value}
-        ajax('POST', data, '/playlists', addPlaylist)
-        listPlaylist
+        ajax('POST', data, '/playlists', listPlaylist)
+        document.querySelector('body').removeChild(inputBox)
     })
 })
 
