@@ -3,7 +3,7 @@
 const playlistContainer = document.querySelector('.playlists')
 
 let listPlaylist = function(){
-    ajax('GET', '', 'playlists.json', addPlaylist)
+    ajax('GET', '', '/playlists', addPlaylist)
 }
 
 let addPlaylist = function(list) {
@@ -54,7 +54,7 @@ addButton.addEventListener('click', function(){
     
     document.querySelector('.okay').addEventListener('click', function(){
         let data = {'title': userInput.value, 'system': 0}
-        ajax('POST', data, 'playlists.json', addPlaylist)
+        ajax('POST', data, '/playlists', addPlaylist)
     })
 })
 

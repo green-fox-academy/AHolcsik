@@ -10,13 +10,11 @@ function ajax(method, data, url, callback) {
         if (xhr.readyState == 4) {
             let recievedData = JSON.parse(xhr.responseText)
             callback(recievedData)
-            console.log(data)
         }
     }
     let sendData = null
     if (data){
         sendData = JSON.stringify(data)
-        console.log(sendData)
     }
     xhr.send(sendData)
 }
