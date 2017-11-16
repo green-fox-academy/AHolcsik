@@ -13,8 +13,9 @@ let addTracks = function(listOtracks) {
         element.setAttribute('class', 'track')
         element.innerHTML = track.path
         trackContainer.appendChild(element)
+        setEventlistenersTracks(track.path)
     })
-    setEventlistenersTracks()
+    displayCurrent()
 }
 
 
@@ -22,9 +23,9 @@ let displayCurrent = function (){
     let current = document.querySelector('audio').getAttribute('src')
     let currentElement = `<article class="playing">${current} is playing</article>`
     currentContainer.innerHTML = currentElement
-}()
+}
 
-function setEventlistenersTracks() {
+function setEventlistenersTracks(title) {
     const trackElements = document.querySelectorAll('.track')
 
     trackElements.forEach(function(e){
@@ -33,4 +34,16 @@ function setEventlistenersTracks() {
                 e.classList.add('activeTrack')
         })
     })
+
+    trackElements.forEach(function(e){
+        e.addEventListener('dblclick', function (){
+            switchMusic(title)
+        })
+    })
+}
+
+function switchMusic(path){
+    let current = document.querySelector('audio')
+    current.setAttribute('src', path)
+
 }
