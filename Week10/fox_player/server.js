@@ -1,7 +1,23 @@
 'use strict'
 
+const mysql = require('mysql');
 const express = require('express');
 const app = express();
+
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'imanoodle',
+    database: 'fox_player'
+  });
+  
+  connection.connect(function(err) {
+    if(err){
+      console.log('Error connecting to database oooh');
+      return;
+    }
+    console.log('Connection established woooo');
+  });
 
 let playlist = [
     { "id": 6, "title": "All tracks", "system": 1},    
@@ -40,6 +56,16 @@ let tracklist = [
 
 app.use(express.json())
 app.use('/', express.static('./assets'))
+
+// app.get('/bookstore', function(req, res) {
+//     conn.query('SELECT book_name FROM book_mast;', function(err, result) {
+//         if(err) {
+//             console.log(err.toString());
+//           }
+//           res.json(result);
+//     })
+// })
+
 
 app.get('/playlists', function(req,res){
     res.json(playlist)
