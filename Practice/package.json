@@ -2,7 +2,7 @@
   "name": "test_practice",
   "version": "1.0.0",
   "description": "",
-  "main": "exception.js",
+  "main": "practice_testing.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
